@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $arial;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	color: $dark;
+	position: relative;
+	background: #fff;
+	margin: 0;
+	padding:  0 0 0 0;
+	overflow-x: hidden;
+
+	&.top-open{
+		overflow: hidden;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+ul,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	text-underline-offset: 3px;
+}
+
+img {
+	width: 100%;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.wrapper{
+	width: 100%;
+	max-width: $wrapper-max-width;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+
+	@media ( $br_point_laptop ) {
+		max-width: 1000px;
+	}
+	@media ( $br_point_tablet ) {
+		max-width: 780px;
+	}
+	@media ( $br_point_phone ) {
+		max-width: 100%;
+	}
+}
+
+.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 47px;
+	background-color: $blue;
+	border-color: $blue;
+	color: #fff;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 1;
+	padding: 0 15px;
+	border-radius: 2em;
+	transition: all 0.3s;
+}
+
+.btn--big{
+	height: 72px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	@media ($br_point_laptop) {
+		height: 50px;
+	}
+}
+
+.btn--blue{
+	background-color: $blue;
+	border: 1px solid $blue;
+	color: #fff;
+
+	&:hover{
+		background: #fff;
+		border-color: $blue;
+		color: $blue;
+	}
+}
+
+.btn--dark-blue{
+	background-color: $dark-blue;
+	border: 1px solid $dark-blue;
+	color: #fff;
+
+	&:hover{
+		background: #fff;
+		border-color: $dark-blue;
+		color: #fff;
+	}
+}
+
+
+
+
+
+
+
+
