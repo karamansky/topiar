@@ -1,0 +1,66 @@
+.image-banner {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.image-banner__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	min-height: 850px;
+	padding-bottom: 75px;
+	overflow: hidden;
+}
+
+.image-banner__title {
+	color: $white60;
+	font-family: $font;
+	font-size: 200px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+
+
+@media ($br_point_laptop) {
+	.image-banner__title {
+		font-size: 160px;
+	}
+}
+
+
+
+@media ($br_point_tablet) {
+	.image-banner__inner {
+		min-height: 600px;
+		padding-bottom: 60px;
+	}
+
+	.image-banner__title {
+		font-size: 100px;
+		word-wrap: break-word;
+	}
+}
+
+
+
+@media ($br_point_phone) {
+	.image-banner__inner {
+		min-height: 400px;
+		padding-bottom: 50px;
+	}
+
+	.image-banner__title {
+		font-size: 60px;
+		word-wrap: break-word;
+	}
+}
+
+
+
+@media ($br_point_small_phone) {
+	.image-banner__title {
+		font-size: 50px;
+	}
+}

@@ -101,6 +101,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'image_banner',
+				'title'       => 'Image banner block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'format-image' ],
+				'keywords'    => [ 'banner', 'image', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'image-banner-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

@@ -521,6 +521,34 @@ button {
   object-fit: cover;
 }
 
+.image-banner {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-banner__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  min-height: 850px;
+  padding-bottom: 75px;
+  overflow: hidden;
+}
+
+.image-banner__title {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Montserrat", sans-serif;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 @media (max-width: 1480px) {
   .image-right__image {
     width: 825px;
@@ -571,6 +599,10 @@ button {
 
   .header__inner {
     height: 74px;
+  }
+
+  .image-banner__title {
+    font-size: 160px;
   }
 }
 
@@ -659,6 +691,16 @@ button {
     padding-bottom: 80px;
     padding-right: 100px;
   }
+
+  .image-banner__inner {
+    min-height: 600px;
+    padding-bottom: 60px;
+  }
+
+  .image-banner__title {
+    font-size: 100px;
+    word-wrap: break-word;
+  }
 }
 
 @media (max-width: 768px) {
@@ -735,6 +777,16 @@ button {
   .image-right__text {
     max-width: 100%;
   }
+
+  .image-banner__inner {
+    min-height: 400px;
+    padding-bottom: 50px;
+  }
+
+  .image-banner__title {
+    font-size: 60px;
+    word-wrap: break-word;
+  }
 }
 
 @media (max-width: 380px) {
@@ -758,5 +810,9 @@ button {
     max-width: 100%;
     font-size: 36px;
     line-height: 46px;
+  }
+
+  .image-banner__title {
+    font-size: 50px;
   }
 }
