@@ -78,8 +78,8 @@ class GutenbergBlocks {
 				'keywords'    => [ 'delimiter', 'line' ]
 			],
 			[
-				'name'        => 'hero',
-				'title'       => 'Hero block',
+				'name'        => 'home_hero',
+				'title'       => 'Home Hero block',
 				'category'    => 'top-blocks',
 				'description' => '',
 				'icon'        => [ 'background' => '#0b1d64', 'src' => 'admin-home' ],
@@ -88,7 +88,7 @@ class GutenbergBlocks {
 					'attributes' => [
 						'mode' => 'preview',
 						'data' => [
-							'image' => 'hero-block.png',
+							'image' => 'home-hero-block.png',
 						]
 					]
 				]

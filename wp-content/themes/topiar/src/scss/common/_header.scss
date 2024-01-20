@@ -5,6 +5,7 @@
 	left: 0;
 	right: 0;
 	top: 0;
+	z-index: 999;
 }
 
 .header__inner {
@@ -179,7 +180,7 @@
 	.header__logo{
 		width: 120px;
 		height: 20px;
-		margin-right: 20px;
+		margin-right: 40px;
 	}
 
 	.header__phone {
@@ -217,6 +218,10 @@
 
 
 @media ($br_point_tablet) {
+	.header__logo{
+		margin-right: 20px;
+	}
+
 	.header__menu {
 		display: none;
 	}
