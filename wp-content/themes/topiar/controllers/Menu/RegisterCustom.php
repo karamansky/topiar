@@ -14,8 +14,9 @@ class RegisterCustom {
 
     public function registerCustomMenuLocations() {
         register_nav_menus( [
-            'primary-menu'     => 'Primary menu',
-            'footer-menu'      => 'Footer menu',
+            'primary-menu'     	=> 'Primary menu',
+            'footer-menu'      	=> 'Footer menu',
+            'footer-bottom-menu'=> 'Footer bottom menu',
         ] );
     }
 

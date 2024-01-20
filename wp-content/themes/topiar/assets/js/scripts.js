@@ -1,43 +1,31 @@
 jQuery(document).ready(function( $ ) {
 
-    if( jQuery('.header__navbar-toggle').length ){
-        jQuery(document).on('click', '.header__navbar-toggle', function(e){
-            e.preventDefault();
-            jQuery(this).toggleClass('top-open');
-            jQuery('.header__menu--mob').toggleClass('top-open').slideToggle('slow');
+    //show/hide mob menu
+    if( jQuery('.header__hamburger').length ){
+        jQuery(document).on('click', '.header__hamburger', function(e){
+           e.preventDefault();
+
+           if(jQuery('.header-mob-menu').length){
+               jQuery('.header-mob-menu').slideToggle();
+           }
         });
     }
 
 
-    if( jQuery('.reviews-slider__items').length ){
-        jQuery('.reviews-slider__items').slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            responsive: [
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '15px',
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '15px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
+
+    //show/hide search form in header
+    if (jQuery('.header__search a').length){
+        jQuery('.header__search a').on('click', function(e){
+            e.preventDefault();
+            jQuery(this).parent().toggleClass('tp-open');
+        });
+
+        $(document).mouseup(function (e){
+            var div = jQuery(".header__search");
+            if (!div.is(e.target)
+                && div.has(e.target).length === 0) {
+                div.removeClass('tp-open');
+            }
         });
     }
 
@@ -89,44 +77,6 @@ jQuery(document).ready(function( $ ) {
 	// 		div.closest('.menu-item-has-children').removeClass('top-active');
 	// 	}
 	// });
-
-
-
-    //add slider to blog
-    let allBlogsBlock = jQuery('.all-blogs__items');
-    if( allBlogsBlock.length ) {
-        allBlogsBlock.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: true,
-            infinite: false,
-            adaptiveHeight: true,
-            appendArrows: $('.all-blogs__pagination-inner'),
-            appendDots: $('.all-blogs__pagination-inner'),
-        });
-
-        allBlogsBlock.on('beforeChange', function( event, slick, currentSlide, nextSlide ) {
-            let top = allBlogsBlock.offset().top - 200;
-            setTimeout(function(  ) {
-                jQuery('body,html').animate({ scrollTop: top }, 300);
-            }, 500)
-        });
-    }
-
-    if( jQuery('.header-menu__btn').length ) {
-        jQuery(document).on('click', '.header-menu__btn', function( e ) {
-            e.preventDefault();
-
-            jQuery(this).toggleClass('top-open');
-            let menu = jQuery('.header-menu__container-mob');
-
-            if( menu.length ) {
-                menu.toggleClass('top-open');
-                jQuery('body').toggleClass('top-open');
-            }
-        })
-    }
 
 
     //Trick for 100vh in mobile browsers

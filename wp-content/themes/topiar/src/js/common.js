@@ -1,5 +1,34 @@
 jQuery(document).ready(function( $ ) {
 
+    //show/hide mob menu
+    if( jQuery('.header__hamburger').length ){
+        jQuery(document).on('click', '.header__hamburger', function(e){
+           e.preventDefault();
+
+           if(jQuery('.header-mob-menu').length){
+               jQuery('.header-mob-menu').slideToggle();
+           }
+        });
+    }
+
+
+
+    //show/hide search form in header
+    if (jQuery('.header__search a').length){
+        jQuery('.header__search a').on('click', function(e){
+            e.preventDefault();
+            jQuery(this).parent().toggleClass('tp-open');
+        });
+
+        $(document).mouseup(function (e){
+            var div = jQuery(".header__search");
+            if (!div.is(e.target)
+                && div.has(e.target).length === 0) {
+                div.removeClass('tp-open');
+            }
+        });
+    }
+
 
     //faq
     if( jQuery('.faq__item-content').length ){

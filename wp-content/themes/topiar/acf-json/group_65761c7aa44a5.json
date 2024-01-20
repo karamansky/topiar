@@ -3,29 +3,9 @@
     "title": "SETTINGS: Footer",
     "fields": [
         {
-            "key": "field_65761c7aae35a",
-            "label": "Footer copyright text",
-            "name": "footer_copy",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_65761c9fae35b",
-            "label": "Footer image",
-            "name": "footer_image",
+            "label": "Footer logo",
+            "name": "footer_logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -36,8 +16,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
+            "return_format": "",
+            "library": "",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -66,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702239420
+    "modified": 1705752925
 }
