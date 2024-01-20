@@ -59,7 +59,7 @@ class GutenbergBlocks {
 					'description'     => !empty( $block['description'] ) ? __( $block['description'] ) : '',
 					'render_template' => 'template-parts/blocks/'.$block['name'].'.php',
 					'category'        => !empty( $block['category'] ) ? $block['category'] : '',
-					'icon'            => !empty( $block['icon'] ) ? $block['icon'] : [ 'background' => '#000133', 'src' => 'desktop' ],
+					'icon'            => !empty( $block['icon'] ) ? $block['icon'] : [ 'background' => '#008237', 'src' => 'desktop' ],
 					'keywords'        => !empty( $block['keywords'] ) ? $block['keywords'] : [],
 					'example'         => !empty( $block['example'] ) ? $block['example'] : [],
 				]
@@ -70,25 +70,33 @@ class GutenbergBlocks {
 	public function returnListOfBlocks() {
 		return [
 			[
-				'name'        => 'delimiter',
-				'title'       => 'Delimiter',
-				'category'    => 'top-blocks',
-				'description' => '',
-				'icon'        => [ 'background' => '#0b1d64', 'src' => 'image-flip-vertical' ],
-				'keywords'    => [ 'delimiter', 'line' ]
-			],
-			[
 				'name'        => 'home_hero',
 				'title'       => 'Home Hero block',
 				'category'    => 'top-blocks',
 				'description' => '',
-				'icon'        => [ 'background' => '#0b1d64', 'src' => 'admin-home' ],
+				'icon'        => [ 'background' => '#008237', 'src' => 'admin-home' ],
 				'keywords'    => [ 'hero', 'page', 'top', 'block' ],
 				'example'     => [
 					'attributes' => [
 						'mode' => 'preview',
 						'data' => [
 							'image' => 'home-hero-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'image_right',
+				'title'       => 'Image right block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'align-pull-right' ],
+				'keywords'    => [ 'text', 'right', 'image', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'image-right-block.png',
 						]
 					]
 				]

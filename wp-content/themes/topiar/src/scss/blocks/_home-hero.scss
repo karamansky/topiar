@@ -126,6 +126,11 @@
 
 
 @media ( $br_point_small_phone ) {
+	.home-hero__title {
+		font-size: 36px;
+		line-height: 46px;
+	}
+
 	.home-hero__buttons {
 		flex-wrap: wrap;
 	}
