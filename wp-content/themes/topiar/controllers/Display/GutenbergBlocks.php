@@ -181,6 +181,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'scrolling_text',
+				'title'       => 'Scrolling text block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'media-text' ],
+				'keywords'    => [ 'text', 'scrolling', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'scrolling-text-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

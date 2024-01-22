@@ -30,6 +30,36 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.scrolling-text__footer').length ) {
+      jQuery(document).on('click', '.scrolling-text__footer', function(e){
+          e.preventDefault();
+
+          if(jQuery(".scrolling-text__content").hasClass("tp-open")) {
+              jQuery(".scrolling-text__content").animate({"height": "155px"}).removeClass("tp-open");
+          } else {
+              jQuery(".scrolling-text__content").animate({"height": "1000px"}).addClass("tp-open");
+          }
+      });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //faq
     if( jQuery('.faq__item-content').length ){
         jQuery(document).on('click', '.faq__item-title', function(e){

@@ -32,8 +32,8 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1;
   color: #000;
   position: relative;
   background: #fff;
@@ -67,9 +67,13 @@ li {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: underline;
   text-underline-offset: 3px;
+  color: #008237;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 img {
@@ -155,6 +159,79 @@ button {
   font-size: 80px;
   font-weight: 700;
   line-height: 1.2;
+}
+
+.text-content ul {
+  padding: 0;
+  margin: 20px 0 20px 20px;
+}
+
+.text-content ul:last-child {
+  margin-bottom: 0;
+}
+
+.text-content ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.25;
+  list-style: none;
+}
+
+.text-content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.text-content ul li:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #008237;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.text-content ol {
+  padding: 0 0 0 15px;
+  margin: 20px 0 20px 20px;
+}
+
+.text-content ol:last-child {
+  margin-bottom: 0;
+}
+
+.text-content ol li {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.25;
+  list-style: decimal;
+}
+
+.text-content ol li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  background: #484848;
+  opacity: 0.6;
+}
+
+.simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.simplebar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 10px;
 }
 
 .icon {
@@ -978,6 +1055,148 @@ button {
   text-decoration: none;
 }
 
+.scrolling-text {
+  padding: 120px 0;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.scrolling-text__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.scrolling-text__header:before {
+  content: "";
+  display: block;
+  width: 376px;
+  height: 3px;
+  background: #c4c4c4;
+  margin-right: 10px;
+}
+
+.scrolling-text__header svg {
+  width: 21px;
+  height: 12px;
+}
+
+.scrolling-text__content {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 20px;
+  min-height: 155px;
+  height: 155px;
+  overflow-y: auto;
+}
+
+.scrolling-text__content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.48px;
+}
+
+.scrolling-text__content h2:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+.scrolling-text__content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.48px;
+}
+
+.scrolling-text__content h3:not(:last-child) {
+  margin: 0 0 15px;
+}
+
+.scrolling-text__content h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.4px;
+}
+
+.scrolling-text__content h4:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.scrolling-text__content h5 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+}
+
+.scrolling-text__content h5:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.scrolling-text__content h6 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+}
+
+.scrolling-text__content h6:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.scrolling-text__content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.scrolling-text__content p:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.scrolling-text__content b,
+.scrolling-text__content strong {
+  font-weight: 700;
+}
+
+.scrolling-text__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.scrolling-text__footer:before {
+  content: "";
+  display: block;
+  width: 376px;
+  height: 3px;
+  background: #008237;
+  margin-right: 10px;
+}
+
+.scrolling-text__footer svg {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 21px;
+  height: 12px;
+}
+
+.tp-open + .scrolling-text__footer svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 @media (max-width: 1480px) {
   .image-right__image {
     width: 825px;
@@ -1418,6 +1637,30 @@ button {
   .clients__item {
     width: 50%;
     height: 125px;
+  }
+
+  .scrolling-text {
+    padding: 80px 0;
+  }
+
+  .scrolling-text__content h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .scrolling-text__content h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .scrolling-text__content h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .scrolling-text__content h5 {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

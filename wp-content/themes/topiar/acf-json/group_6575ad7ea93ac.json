@@ -1,6 +1,6 @@
 {
     "key": "group_6575ad7ea93ac",
-    "title": "SETTINGS: Header",
+    "title": "Settings: Header",
     "fields": [
         {
             "key": "field_6575ad7eaf875",
@@ -66,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705752826
+    "modified": 1705933669
 }

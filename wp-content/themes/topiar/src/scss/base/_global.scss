@@ -7,8 +7,8 @@
 body {
 	font-family: $font;
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
+	font-size: 14px;
+	line-height: 1;
 	color: #000;
 	position: relative;
 	background: #fff;
@@ -42,9 +42,13 @@ li {
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+	text-decoration: underline;
 	text-underline-offset: 3px;
+	color: $green;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 img {
@@ -168,7 +172,82 @@ button {
 	}
 }
 
+.text-content {
+	ul {
+		padding: 0;
+		margin: 20px 0 20px 20px;
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			position: relative;
+			padding-left: 20px;
+			font-size: 14px;
+			line-height: 1.25;
+			list-style: none;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: $green;
+				position: absolute;
+				left: 0;
+				top: 6px;
+			}
+		}
+	}
+
+	ol {
+		padding: 0 0 0 15px;
+		margin: 20px 0 20px 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			position: relative;
+			font-size: 14px;
+			line-height: 1.25;
+			list-style: decimal;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+
+//custom scrollbar
+.simplebar-scrollbar.simplebar-visible:before {
+	background: $gray;
+	opacity: 0.6;
+}
+
+.simplebar-scrollbar:before {
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.simplebar-track {
+	background: $white10;
+}
+
+.simplebar-track.simplebar-vertical {
+	width: 10px;
+}
 
 
 
