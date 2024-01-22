@@ -15,7 +15,8 @@ class RegisterCustom {
     public function registerCustomPostTypes() {
         if( !function_exists( 'register_post_type' ) ) return;
 
-        static::registerCustomPostTypeSingle( 'reviews', 'Reviews', 'Review', 'reviews' );
+        static::registerCustomPostTypeSingle( 'portfolio', 'Portfolio', 'Portfolio', 'portfolio' );
+        static::registerCustomPostTypeSingle( 'uslugi-kompanii', 'Services', 'Service', 'uslugi-kompanii' );
     }
 
     static public function registerCustomPostTypeSingle( $type_name, $label, $singular, $slug = '', $supports = [] ) {
@@ -40,7 +41,7 @@ class RegisterCustom {
             "delete_with_user"    => false,
             "exclude_from_search" => false,
             "capability_type"     => "page",
-            "hierarchical"        => false,
+            "hierarchical"        => true,
             "rewrite"             => [ "slug" => $slug ],
             "query_var"           => true,
             "supports"            => $supports

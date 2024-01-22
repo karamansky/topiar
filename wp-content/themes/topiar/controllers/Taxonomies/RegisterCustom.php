@@ -5,7 +5,7 @@ if( !defined( 'ABSPATH' ) ) exit;
 class RegisterCustom {
 
     public static $list_of_taxonomies = [
-        'review_type' => [ 'Review Types', 'Review Type', 'reviews', 'review-type' ],
+        'category' => [ 'Category', 'Category', 'uslugi-kompanii', 'category_2' ],
     ];
 
     public function __construct() {
@@ -47,7 +47,7 @@ class RegisterCustom {
             "show_in_rest"          => true,
             "show_tagcloud"         => false,
             "rest_controller_class" => "WP_REST_Terms_Controller",
-            "show_in_quick_edit"    => false,
+            "show_in_quick_edit"    => true,
             "show_in_graphql"       => false,
             'meta_box_cb'           => 'post_categories_meta_box'
         ];

@@ -117,6 +117,70 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'portfolio',
+				'title'       => 'Portfolio block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'grid-view' ],
+				'keywords'    => [ 'portfolio', 'image', 'портфоліо', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'portfolio-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'services',
+				'title'       => 'Services block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'grid-view' ],
+				'keywords'    => [ 'services', 'image', 'услуги', 'послуги', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'services-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'numbers',
+				'title'       => 'Numbers block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'editor-insertmore' ],
+				'keywords'    => [ 'numbers', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'numbers-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'clients',
+				'title'       => 'Clients block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'align-pull-right' ],
+				'keywords'    => [ 'clients', 'our clients', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'clients-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
