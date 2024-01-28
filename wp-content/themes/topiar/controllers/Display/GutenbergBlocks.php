@@ -229,6 +229,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'team',
+				'title'       => 'Team block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'images-alt' ],
+				'keywords'    => [ 'team', 'komanda', 'our team', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'team-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
