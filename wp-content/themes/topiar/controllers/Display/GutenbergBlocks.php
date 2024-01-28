@@ -213,6 +213,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'text-two-cols',
+				'title'       => 'Text two columns block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'editor-table' ],
+				'keywords'    => [ 'text', 'columns', 'content', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'text-two-cols-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
