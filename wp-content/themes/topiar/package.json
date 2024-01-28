@@ -1,12 +1,12 @@
 {
-  "name": "TopContext",
+  "name": "Topiar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "SWS",
+  "author": "SK",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.14",

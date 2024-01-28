@@ -7,11 +7,15 @@ class DisplayBreadcrumbs {
 	public static function prepareSubtitleItemsForAutomaticBreadcrumbs() {
 		global $post;
 
+		if( is_front_page() ) {
+			return [];
+		}
+
 		//default first breadcrumb
 		if( !is_front_page() ) {
 			$subtitle_items[] = [
 				'url'   => get_home_url(),
-				'title' => '<i class="icon icon-home"></i>'
+				'title' => __('Головна', 'top')
 			];
 		}
 

@@ -17,6 +17,7 @@ class RegisterCustom {
             'primary-menu'     	=> 'Primary menu',
             'footer-menu'      	=> 'Footer menu',
             'footer-bottom-menu'=> 'Footer bottom menu',
+            'catalog-menu'		=> 'Catalog menu',
         ] );
     }
 

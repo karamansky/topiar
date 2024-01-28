@@ -197,6 +197,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'catalog',
+				'title'       => 'Catalog block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'table-col-after' ],
+				'keywords'    => [ 'categories', 'uslugi', 'catalog', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'catalog-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

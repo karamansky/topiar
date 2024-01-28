@@ -4,7 +4,7 @@ get_header();
 
 ?>
     <section class="search-results">
-        <div class="gj-wrapper">
+        <div class="wrapper">
             <?php if( have_posts() ) { ?>
 				<?php
 					while( have_posts() ) {

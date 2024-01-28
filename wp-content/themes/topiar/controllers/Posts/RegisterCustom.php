@@ -16,10 +16,10 @@ class RegisterCustom {
         if( !function_exists( 'register_post_type' ) ) return;
 
         static::registerCustomPostTypeSingle( 'portfolio', 'Portfolio', 'Portfolio', 'portfolio' );
-        static::registerCustomPostTypeSingle( 'uslugi-kompanii', 'Services', 'Service', 'uslugi-kompanii' );
+        static::registerCustomPostTypeSingle( 'uslugi-kompanii', 'Services', 'Service', 'uslugi-kompanii', true );
     }
 
-    static public function registerCustomPostTypeSingle( $type_name, $label, $singular, $slug = '', $supports = [] ) {
+    static public function registerCustomPostTypeSingle( $type_name, $label, $singular, $slug = '', $has_archive = false, $supports = [] ) {
         $slug = !empty( $slug ) ? $slug : $type_name;
         $supports = !empty( $supports ) ? $supports : [ "title", "editor", "excerpt", "thumbnail", "author", "page-attributes" ];
 
@@ -33,7 +33,7 @@ class RegisterCustom {
             "public"              => true,
             "publicly_queryable"  => true,
             "show_ui"             => true,
-            "has_archive"         => false,
+            "has_archive"         => $has_archive,
             "show_in_menu"        => true,
             "show_in_rest"        => true, // To use Gutenberg editor.
             "show_in_nav_menus"   => true,

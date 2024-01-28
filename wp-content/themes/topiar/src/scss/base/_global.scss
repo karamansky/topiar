@@ -9,9 +9,9 @@ body {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1;
-	color: #000;
+	color: #fff;
 	position: relative;
-	background: #fff;
+	background: $black;
 	margin: 0;
 	padding:  0 0 0 0;
 	overflow-x: hidden;
@@ -42,13 +42,9 @@ li {
 }
 
 a {
-	text-decoration: underline;
 	text-underline-offset: 3px;
-	color: $green;
-
-	&:hover {
-		text-decoration: none;
-	}
+	text-decoration: none;
+	transition: all 0.3s;
 }
 
 img {
@@ -110,6 +106,7 @@ button {
 	backdrop-filter: blur(3px);
 	color: #FFF;
 	text-align: center;
+	text-decoration: none;
 	font-family: $font-secondary;
 	font-size: 20px;
 	font-weight: 700;
@@ -117,6 +114,10 @@ button {
 	letter-spacing: 0.4px;
 	padding: 0 15px;
 	transition: all 0.3s;
+
+	&:hover {
+		text-decoration: none;
+	}
 
 	@media ($br_point_laptop) {
 		width: 260px;
@@ -173,6 +174,15 @@ button {
 }
 
 .text-content {
+	a {
+		color: $green;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	ul {
 		padding: 0;
 		margin: 20px 0 20px 20px;
@@ -227,6 +237,36 @@ button {
 	}
 }
 
+.link-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.link-instagram {
+	background-image: url('../img/icons/instagram.svg');
+}
+.link-facebook {
+	background-image: url('../img/icons/facebook.svg');
+}
+.link-youtube {
+	background-image: url('../img/icons/youtube.svg');
+}
+.link-linkedin {
+	background-image: url('../img/icons/linkedin.svg');
+}
+.link-behance {
+	background-image: url('../img/icons/behance.svg');
+}
+.link-pinterest {
+	background-image: url('../img/icons/pinterest.svg');
+}
 
 //custom scrollbar
 .simplebar-scrollbar.simplebar-visible:before {
@@ -235,10 +275,10 @@ button {
 }
 
 .simplebar-scrollbar:before {
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .simplebar-track {
