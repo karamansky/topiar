@@ -16,8 +16,7 @@
 <section class="home-hero" <?php echo DisplayGlobal::generateStyleWithBgImageOrNothing( $background ); ?> >
 	<div class="wrapper">
 		<div class="home-hero__inner">
-			<div class="home-hero__content">
-
+			<?php if( !empty($breadcrumbs) ) { ?>
 				<ul class="breadcrumbs">
 					<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 						<li class="breadcrumbs__item">
@@ -29,7 +28,8 @@
 						</li>
 					<?php } ?>
 				</ul>
-
+			<?php } ?>
+			<div class="home-hero__content">
 				<?php if( !empty($title) ) { ?>
 					<h1 class="home-hero__title"><?php echo $title ?></h1>
 				<?php } ?>

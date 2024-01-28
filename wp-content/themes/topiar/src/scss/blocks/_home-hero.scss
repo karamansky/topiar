@@ -24,6 +24,7 @@
 		display: flex;
 		overflow-x: auto;
 		position: relative;
+		padding-top: 40px;
 		z-index: 4;
 
 		li {
@@ -63,11 +64,13 @@
 }
 
 .home-hero__content {
-	padding-top: 40px;
 	padding-bottom: 150px;
 	min-height: 754px;
 	position: relative;
 	z-index: 4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	&:after {
 		content: '';
@@ -110,6 +113,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	.btn--white {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	.btn--green {
+		margin-left: auto;
+		margin-right: 0;
+	}
 }
 
 
@@ -147,10 +160,34 @@
 
 
 @media ( $br_point_phone ) {
+	.home-hero {
+		padding-top: 60px;
+	}
+
+	.home-hero .breadcrumbs {
+		padding-top: 15px;
+
+		li {
+			font-size: 12px;
+			line-height: 18px;
+		}
+
+		a {
+			font-size: 12px;
+			line-height: 18px;
+		}
+
+		span {
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+
 	.home-hero__content {
-		padding-top: 65px;
-		padding-bottom: 100px;
-		min-height: 400px;
+		padding-top: 40px;
+		padding-bottom: 50px;
+		min-height: 350px;
+		display: block;
 
 		&:after {
 			display: none;
@@ -161,6 +198,7 @@
 		font-size: 40px;
 		line-height: 50px;
 		letter-spacing: 3px;
+		margin-top: 10px;
 	}
 }
 
