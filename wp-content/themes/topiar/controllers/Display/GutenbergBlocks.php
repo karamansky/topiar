@@ -245,6 +245,38 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'reviews',
+				'title'       => 'Reviews block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'admin-page' ],
+				'keywords'    => [ 'reviews', 'slider', 'clients', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'reviews-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'faq',
+				'title'       => 'FAQ block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'editor-justify' ],
+				'keywords'    => [ 'faq', 'question', 'accordion', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'faq-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

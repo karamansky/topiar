@@ -94,6 +94,39 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if (jQuery('.reviews__items').length) {
+        jQuery('.reviews__items').slick({
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            arrows: true,
+            dots: false,
+            centerPadding: '60px',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+    if( jQuery('.faq__item').length ) {
+        jQuery(document).on('click', '.faq__item-header', function(e){
+            let item = jQuery(this).parent();
+            item.toggleClass('tp-open');
+            item.find('.faq__item-footer').slideToggle();
+        })
+    }
+
 
 
 
