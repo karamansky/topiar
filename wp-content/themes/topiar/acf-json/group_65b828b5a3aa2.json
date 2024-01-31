@@ -148,8 +148,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "d\/m\/y",
-                    "return_format": "d\/m\/y",
+                    "display_format": "d.m.y",
+                    "return_format": "d.m.y",
                     "first_day": 1,
                     "parent_repeater": "field_65b828fef3cf5"
                 }
@@ -174,5 +174,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706568084
+    "modified": 1706691120
 }

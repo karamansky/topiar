@@ -51,8 +51,11 @@
 							<?php } ?>
 						</div>
 						<?php if( !empty($item['text']) ) { ?>
-							<div class="reviews__text">
-								<?php echo $item['text']; ?>
+							<div class="reviews__item-bottom">
+								<div class="reviews__text">
+									<?php echo $item['text']; ?>
+								</div>
+								<a href="#" class="reviews__item-readmore" data-text="<?php _e('Менше', 'top'); ?>"><?php _e('Читати більше', 'top'); ?></a>
 							</div>
 						<?php } ?>
 					</div>

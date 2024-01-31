@@ -7,7 +7,7 @@ jQuery(document).ready(function( $ ) {
             autoHide: false
         });
 
-        jQuery(document).on('click', '.header__hamburger', function(e){
+        jQuery(document).on('click', '.header__hamburger', (e) => {
            e.preventDefault();
 
            if(jQuery('.header-mob-menu').length){
@@ -20,7 +20,7 @@ jQuery(document).ready(function( $ ) {
            }
         });
 
-        jQuery(window).resize(function(){
+        jQuery(window).resize(() => {
             jQuery('.header-mob-menu').slideUp();
             jQuery('.header .menu-item-has-children').removeClass('tp-open');
             jQuery('.header .sub-menu').slideUp();
@@ -28,19 +28,19 @@ jQuery(document).ready(function( $ ) {
     }
     if( jQuery('.menu-item-has-children').length ){
         if( jQuery(window).width() > 1024 ){
-            jQuery(document).on('mouseenter', '.header .menu-item-has-children > a', function() {
+            jQuery(document).on('mouseenter', '.header .menu-item-has-children > a', () => {
                 jQuery(this).siblings('.sub-menu').stop(true, true).slideDown();
             }).on('mouseleave', '.header .menu-item-has-children', function() {
                 jQuery('.sub-menu', jQuery(this)).stop(true, true).slideUp('fast');
             });
         }else{
-            jQuery(document).on('click', '.header .menu-item-has-children > a', function(e){
+            jQuery(document).on('click', '.header .menu-item-has-children > a', (e) => {
                 e.preventDefault();
                 jQuery(this).siblings('.sub-menu').stop(true, true).slideToggle();
             });
         }
 
-        jQuery(document).mouseup(function (e){
+        jQuery(document).mouseup( (e) => {
             var div = jQuery(".header__menu");
             if (!div.is(e.target)
                 && div.has(e.target).length === 0) {
@@ -53,11 +53,11 @@ jQuery(document).ready(function( $ ) {
 
     //show/hide search form in header
     if (jQuery('.header__search a').length){
-        jQuery('.header__search a').on('click', function(e){
+        jQuery('.header__search a').on('click', (e) => {
             e.preventDefault();
             jQuery(this).parent().toggleClass('tp-open');
         });
-        jQuery(document).mouseup(function (e){
+        jQuery(document).mouseup( (e) => {
             var div = jQuery(".header__search");
             if (!div.is(e.target)
                 && div.has(e.target).length === 0) {
@@ -68,7 +68,7 @@ jQuery(document).ready(function( $ ) {
 
 
     if( jQuery('.scrolling-text__footer').length ) {
-      jQuery(document).on('click', '.scrolling-text__footer', function(e){
+      jQuery(document).on('click', '.scrolling-text__footer', (e) => {
           e.preventDefault();
 
           if(jQuery(".scrolling-text__content").hasClass("tp-open")) {
@@ -86,7 +86,7 @@ jQuery(document).ready(function( $ ) {
             autoHide: false
         });
 
-        jQuery(document).on('click', '.catalog-block__menu .menu-item-has-children > a', function(e){
+        jQuery(document).on('click', '.catalog-block__menu .menu-item-has-children > a', (e) => {
             e.preventDefault();
             jQuery(this).parent().toggleClass('tp-open');
             jQuery(this).siblings('.sub-menu').slideToggle();
@@ -115,12 +115,36 @@ jQuery(document).ready(function( $ ) {
                 }
             ]
         });
+
+        //hide readmore button
+        jQuery('.reviews__text').each((e, ele) => {
+            if( ele.scrollHeight <= 175 ) {
+                jQuery(ele).siblings('.reviews__item-readmore').hide();
+            }
+        });
+
+        jQuery(document).on('click', '.reviews__item-bottom .reviews__item-readmore', (e) => {
+            e.preventDefault();
+            let link = jQuery(e.target);
+            let textBlock = link.prev('.reviews__text');
+            let textOpen = link.text();
+            let textClose = link.attr('data-text');
+
+            if(textBlock.hasClass("tp-open")) {
+                textBlock.animate({'height': '175px'}).removeClass('tp-open');
+            } else {
+                textBlock.animate({'height': '350px'}).addClass('tp-open');
+            }
+
+            link.attr('data-text', textOpen);
+            link.text( textClose );
+        })
     }
 
 
 
     if( jQuery('.faq__item').length ) {
-        jQuery(document).on('click', '.faq__item-header', function(e){
+        jQuery(document).on('click', '.faq__item-header', (e) => {
             let item = jQuery(this).parent();
             item.toggleClass('tp-open');
             item.find('.faq__item-footer').slideToggle();

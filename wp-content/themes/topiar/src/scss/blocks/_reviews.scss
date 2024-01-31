@@ -45,7 +45,7 @@
 	width: calc(50% - 28px);
 	min-height: 434px;
 	background: $black;
-	padding: 45px 77px 0 60px;
+	padding: 45px 60px 20px 60px;
 }
 
 .reviews__item-header {
@@ -103,6 +103,12 @@
 	}
 }
 
+.reviews__item-bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .reviews__text {
 	width: 100%;
 	height: 175px;
@@ -113,6 +119,7 @@
 	font-weight: 400;
 	line-height: 20px;
 	text-overflow: ellipsis;
+	transition: all .3s;
 
 	p {
 		font-size: 12px;
@@ -123,8 +130,26 @@
 			margin-bottom: 18px;
 		}
 	}
+
+	&.tp-open {
+		overflow-y: auto;
+	}
 }
 
+.reviews__item-readmore {
+	color: $orange;
+	font-family: $font;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 26px;
+	margin-left: auto;
+	margin-top: 50px;
+	margin-right: 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
 
 
 
