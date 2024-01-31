@@ -2001,6 +2001,7 @@ button {
   position: absolute;
   top: 20px;
   left: 0;
+  z-index: 3;
 }
 
 .faq__left {
@@ -2008,7 +2009,6 @@ button {
   padding: 105px 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: -170px;
 }
 
 .faq__items {
@@ -2118,9 +2118,16 @@ button {
 }
 
 .faq__image {
+  position: absolute;
   width: 600px;
   height: 100%;
   z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: auto;
+  right: 0;
 }
 
 .faq__image img {
@@ -2150,9 +2157,9 @@ button {
   flex-direction: row-reverse;
 }
 
-.faq--right .faq__left {
-  margin-left: -170px;
-  margin-right: 0;
+.faq--right .faq__image {
+  left: 0;
+  right: auto;
 }
 
 .faq--right .faq__image img {
@@ -2498,6 +2505,10 @@ button {
     right: -25px;
   }
 
+  .faq__image {
+    width: 430px;
+  }
+
   .footer__menu {
     width: 360px;
   }
@@ -2770,6 +2781,22 @@ button {
     font-size: 50px;
     line-height: 60px;
     margin-bottom: 40px;
+  }
+
+  .faq__image {
+    display: none;
+  }
+
+  .faq__left {
+    width: 100%;
+    padding: 27px 0;
+  }
+
+  .faq__title {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
   }
 
   .footer__social-item:not(:last-child) {
@@ -3075,6 +3102,12 @@ button {
     margin-bottom: 10px;
   }
 
+  .team__title {
+    text-align: left;
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
   .reviews {
     padding: 80px 0 80px;
   }
@@ -3092,6 +3125,19 @@ button {
   .reviews__items .slick-prev,
   .reviews__items .slick-next {
     display: none;
+  }
+
+  .faq__item-header {
+    padding: 20px 14px;
+  }
+
+  .faq__item-footer {
+    padding: 0 14px 20px;
+  }
+
+  .faq__title {
+    font-size: 40px;
+    line-height: 1.15;
   }
 
   .footer {

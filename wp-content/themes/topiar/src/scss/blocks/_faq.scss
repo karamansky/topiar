@@ -40,13 +40,14 @@
 	position: absolute;
 	top: 20px;
 	left: 0;
+	z-index: 3;
 }
 
 .faq__left {
 	width: 800px;
 	padding: 105px 0;
 	flex-shrink: 0;
-	margin-right: -170px;
+	//margin-right: -170px;
 }
 
 .faq__items {
@@ -138,9 +139,14 @@
 }
 
 .faq__image {
+	position: absolute;
 	width: 600px;
 	height: 100%;
 	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
+	left: auto;
+	right: 0;
 
 	img {
 		display: block;
@@ -164,12 +170,10 @@
 		flex-direction: row-reverse;
 	}
 
-	.faq__left {
-		margin-left: -170px;
-		margin-right: 0;
-	}
-
 	.faq__image {
+		left: 0;
+		right: auto;
+
 		img {
 			display: block;
 			width: 100%;
@@ -179,3 +183,55 @@
 		}
 	}
 }
+
+
+
+
+@media ( $br_point_laptop ) {
+	.faq__image {
+		width: 430px;
+	}
+}
+
+
+
+
+@media ( $br_point_tablet ) {
+	.faq__image {
+		display: none;
+	}
+
+	.faq__left {
+		width: 100%;
+		padding: 27px 0;
+	}
+
+	.faq__title {
+		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+	}
+}
+
+
+
+
+@media ( $br_point_phone ) {
+	.faq__item-header {
+		padding: 20px 14px;
+	}
+
+	.faq__item-footer {
+		padding: 0 14px 20px;
+	}
+
+	.faq__title {
+		font-size: 40px;
+		line-height: 1.15;
+	}
+
+
+}
+
+
