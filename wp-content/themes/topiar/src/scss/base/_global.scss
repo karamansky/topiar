@@ -152,6 +152,17 @@ button {
 	}
 }
 
+.btn--gray{
+	border: 1px solid $black20;
+	background: $black10;
+	color: $gray;
+
+	&:hover{
+		background: $green;
+		color: $white;
+	}
+}
+
 .section-title {
 	color: $white;
 	font-family: $font;
