@@ -1,19 +1,21 @@
 <?php get_header(); ?>
 
-<section class="section_search">
-    <div class="wrapper">
-        <h1>404</h1>
-        <h3><?php esc_html_e( 'The page you are looking for doesn’t exist or has been moved.', 'tp' ); ?></h3>
-        <p><?php esc_html_e( 'Perhaps a quick search can help you find it.', 'tp' ); ?> <a class="accent-links" href="/contact"><?php esc_html_e( 'Contact us', 'tp' ); ?></a> <?php esc_html_e( 'if you need a hand.', 'tp' ); ?></p>
-        <form action="/">
-			<div class="input-wrap">
-				<input type="text" placeholder="" name="s">
-				<a href="#" class="search_clear"></a>
+<section class="error404">
+	<div class="wrapper">
+		<div class="error404__inner">
+			<div class="error404__header">
+				<h3 class="error404__title"><?php esc_html_e( 'На жаль, за вашим запитом нічого не знайдено, але ...', 'tp' ); ?></h3>
+				<div class="error404__number">
+					404
+				</div>
+				<h3 class="error404__title"><?php esc_html_e( '... Ви можете подивитись щось інше ', 'tp' ); ?></h3>
 			</div>
-            <button type="submit"><?php esc_html_e( 'Search', 'tp' ); ?></button>
-        </form>
-        <a class="accent-links" href="<?php echo get_home_url(); ?>"><?php esc_html_e( 'Go Back to Home', 'tp' ); ?></a>
-    </div>
+			<div class="error404__buttons">
+				<a href="/" class="btn btn--orange error404__button"><?php _e('Каталог', 'tp'); ?></a>
+				<a href="/kontakty" class="btn btn--green error404__button"><?php _e('Звертайтесь', 'tp'); ?></a>
+			</div>
+		</div>
+	</div>
 </section>
 
 <?php get_footer(); ?>

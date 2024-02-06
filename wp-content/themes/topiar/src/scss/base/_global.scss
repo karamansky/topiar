@@ -163,6 +163,17 @@ button {
 	}
 }
 
+.btn--orange{
+	border: 1px solid $white;
+	color: $white;
+	background: rgba(239, 125, 0, 0.60);
+
+	&:hover{
+		background: $orange;
+		color: $white;
+	}
+}
+
 .texture-bg {
 	background: $black url('../img/bg.png') center center repeat;
 	background-size: cover;
