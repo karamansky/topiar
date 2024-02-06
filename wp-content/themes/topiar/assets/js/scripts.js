@@ -28,7 +28,7 @@ jQuery(document).ready(function( $ ) {
     }
     if( jQuery('.menu-item-has-children').length ){
         if( jQuery(window).width() > 1024 ){
-            jQuery(document).on('mouseenter', '.header .menu-item-has-children > a', () => {
+            jQuery(document).on('mouseenter', '.header .menu-item-has-children > a', function() {
                 jQuery(this).siblings('.sub-menu').stop(true, true).slideDown();
             }).on('mouseleave', '.header .menu-item-has-children', function() {
                 jQuery('.sub-menu', jQuery(this)).stop(true, true).slideUp('fast');
