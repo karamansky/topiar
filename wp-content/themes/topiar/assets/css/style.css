@@ -2592,19 +2592,19 @@ button {
   width: calc(100% - 410px);
 }
 
-.error404 {
+.error-404 {
   background: #fff url("../img/404-bg.png") bottom left no-repeat;
   background-size: contain;
-  padding: 80px 0 245px;
+  padding: 160px 0 245px;
 }
 
-.error404__header {
+.error-404__header {
   max-width: 660px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.error404__title {
+.error-404__title {
   text-align: center;
   color: #0a0a0a;
   font-family: "Montserrat", sans-serif;
@@ -2613,7 +2613,7 @@ button {
   line-height: 32px;
 }
 
-.error404__number {
+.error-404__number {
   text-align: center;
   color: #484848;
   font-family: "Montserrat", sans-serif;
@@ -2624,7 +2624,7 @@ button {
   margin: 30px 0;
 }
 
-.error404__buttons {
+.error-404__buttons {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3799,21 +3799,21 @@ button {
     height: 450px;
   }
 
-  .error404 {
-    padding: 60px 0 100px;
+  .error-404 {
+    padding: 120px 0 120px;
   }
 
-  .error404__number {
+  .error-404__number {
     font-weight: 700;
     font-size: 100px;
     line-height: 1.2;
   }
 
-  .error404__buttons {
+  .error-404__buttons {
     display: block;
   }
 
-  .error404__button {
+  .error-404__button {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
