@@ -163,6 +163,11 @@ button {
 	}
 }
 
+.texture-bg {
+	background: $black url('../img/bg.png') center center repeat;
+	background-size: cover;
+}
+
 .section-title {
 	color: $white;
 	font-family: $font;

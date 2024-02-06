@@ -1,0 +1,203 @@
+.contacts {
+	padding: 164px 0;
+}
+
+.contacts__inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contacts__main {
+	flex-shrink: 0;
+	width: 410px;
+	padding-right: 50px;
+}
+
+.contacts__title {
+	color: #F2F2F2;
+	font-family: $font;
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 56px;
+	margin-bottom: 55px;
+}
+
+.contacts__address {
+	color: #F2F2F2;
+	font-family: $font;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 32px;
+	margin-bottom: 50px;
+}
+
+.contacts__phones {
+	margin-bottom: 50px;
+
+	a {
+		display: block;
+		color: #F2F2F2;
+		font-family: $font;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 40px;
+		transition: all 0.3s;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+.contacts__emails {
+	margin-bottom: 50px;
+
+	a {
+		display: block;
+		color: #F2F2F2;
+		font-family: $font;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 40px;
+		transition: all 0.3s;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+.contacts__social-title {
+	color: $green;
+	font-family: $font;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 32px;
+	margin-bottom: 50px;
+}
+
+.contacts__social-items {
+	display: flex;
+	align-items: center;
+}
+
+.contacts__social-item {
+	margin-right: 28px;
+	transition: all 0.3s;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.contacts__map {
+	width: calc(100% - 410px);
+}
+
+
+
+
+@media ( $br_point_tablet ) {
+	.contacts {
+		padding: 80px 0;
+	}
+
+	.contacts__title {
+		margin-bottom: 30px;
+	}
+
+	.contacts__address {
+		margin-bottom: 25px;
+	}
+
+	.contacts__phones {
+		margin-bottom: 25px;
+	}
+
+	.contacts__emails {
+		margin-bottom: 25px;
+	}
+
+	.contacts__social-title {
+		margin-bottom: 25px;
+	}
+
+	.contacts__map {
+		iframe {
+			height: 450px;
+		}
+	}
+}
+
+
+
+
+@media ( $br_point_phone ) {
+	.contacts__inner {
+		flex-wrap: wrap;
+	}
+
+	.contacts__main {
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 50px;
+	}
+
+	.contacts__title {
+		font-size: 40px;
+		line-height: 1.15;
+	}
+
+	.contacts__address {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+
+	.contacts__phones {
+
+		a{
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	}
+
+	.contacts__emails {
+
+		a{
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	}
+
+	.contacts__social-title {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	.contacts__social-item {
+		margin-right: 20px;
+	}
+
+	.contacts__map {
+		width: 100%;
+
+		iframe {
+			height: 450px;
+		}
+	}
+}
+
+
+
+
+@media ( $br_point_small_phone ) {
+	.contacts__title {
+		font-size: 32px;
+	}
+
+	.contacts__map {
+		iframe {
+			height: 380px;
+		}
+	}
+}

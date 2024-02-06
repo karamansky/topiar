@@ -293,6 +293,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'contacts',
+				'title'       => 'Contacts block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'location-alt' ],
+				'keywords'    => [ 'contacts', 'map', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'contacts-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
