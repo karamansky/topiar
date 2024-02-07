@@ -3002,6 +3002,16 @@ button {
   background: #0a0a0a;
 }
 
+.text-page__title {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin: 26px 0;
+}
+
 .text-page__date {
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -4346,6 +4356,10 @@ button {
 
   .portfolio__buttons-wrap .btn {
     width: 100%;
+  }
+
+  .text-page {
+    padding: 30px 0 50px;
   }
 
   .footer {
