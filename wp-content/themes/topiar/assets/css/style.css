@@ -100,6 +100,93 @@ button {
   margin: 0 auto;
 }
 
+.main {
+  padding-top: 98px;
+}
+
+.main h2 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 26px 0;
+}
+
+.main h3 {
+  color: #008237;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+.main h4 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 16px 0;
+}
+
+.main h5 {
+  color: #008237;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 14px 0;
+}
+
+.main ul,
+.main ol {
+  margin: 14px 0;
+  padding-left: 14px;
+}
+
+.main ul li,
+.main ol li {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style-position: inside;
+}
+
+.main ul li {
+  list-style-type: disc;
+}
+
+.main ol li {
+  list-style-type: decimal;
+}
+
+.main a {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+
+.main a:hover {
+  text-decoration: none;
+}
+
+.main p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2910,6 +2997,20 @@ button {
   margin-top: 86px;
 }
 
+.text-page {
+  padding: 55px 0 100px;
+  background: #0a0a0a;
+}
+
+.text-page__date {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+
 .footer {
   padding: 120px 0 30px;
   background: #0a0a0a url("../img/bg.png") center center no-repeat;
@@ -3284,6 +3385,10 @@ button {
 
   .wrapper--small {
     max-width: 780px;
+  }
+
+  .main {
+    padding-top: 74px;
   }
 
   .section-title {
@@ -3702,6 +3807,10 @@ button {
 
   .wrapper--small {
     max-width: 100%;
+  }
+
+  .main {
+    padding-top: 60px;
   }
 
   .btn {

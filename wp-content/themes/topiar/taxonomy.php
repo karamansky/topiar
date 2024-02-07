@@ -1,6 +1,6 @@
 <?php
 	/*
-	Template Name: Archives Catalog
+	Template Name: Archive: Catalog
 	*/
 	get_header(); ?>
 
