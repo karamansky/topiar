@@ -3,6 +3,26 @@
     "title": "Post: Portfolio",
     "fields": [
         {
+            "key": "field_65c346bfdbc1d",
+            "label": "Year",
+            "name": "year",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65ad1bd6bddc1",
             "label": "Type",
             "name": "type",
@@ -196,5 +216,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705844677
+    "modified": 1707296474
 }

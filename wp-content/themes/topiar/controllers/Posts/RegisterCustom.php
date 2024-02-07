@@ -15,8 +15,8 @@ class RegisterCustom {
     public function registerCustomPostTypes() {
         if( !function_exists( 'register_post_type' ) ) return;
 
-        static::registerCustomPostTypeSingle( 'portfolio', 'Portfolio', 'Portfolio', 'portfolio' );
-        static::registerCustomPostTypeSingle( 'uslugi-kompanii', 'Services', 'Service', 'uslugi-kompanii', true );
+        static::registerCustomPostTypeSingle( 'portfolio', __('Портфоліо', 'tp'), __('Портфоліо', 'tp'), 'portfolio', true );
+        static::registerCustomPostTypeSingle( 'uslugi-kompanii', __('Послуги', 'tp'), __('Послуга', 'tp'), 'uslugi-kompanii', true );
     }
 
     static public function registerCustomPostTypeSingle( $type_name, $label, $singular, $slug = '', $has_archive = false, $supports = [] ) {

@@ -19,6 +19,9 @@ $controllers = [
     'Enqueue'      => [
         'EnqueueFiles'
     ],
+    'Archive'      => [
+        'ArchiveDisplay'
+    ],
     'Posts'        => [
         'PostsLoop',
         'RegisterCustom'

@@ -18,15 +18,15 @@
 		<div class="home-hero__inner">
 			<?php if( !empty($breadcrumbs) ) { ?>
 				<ul class="breadcrumbs">
-					<?php foreach ($breadcrumbs as $breadcrumb) { ?>
+					<?php $i = 1; foreach ($breadcrumbs as $breadcrumb) { ?>
 						<li class="breadcrumbs__item">
 							<?php if( !empty($breadcrumb['url']) ) { ?>
-								<a href="<?php echo $breadcrumb['url'] ?>"><?php echo $breadcrumb['title']; ?></a>&nbsp;/&nbsp;
+								<a href="<?php echo $breadcrumb['url'] ?>"><?php echo $breadcrumb['title']; ?></a><?php if( $i < count($breadcrumbs) ) { ?>&nbsp;/&nbsp;<?php } ?>
 							<?php } else { ?>
-								<span><?php echo $breadcrumb['title']; ?></span>&nbsp;/&nbsp;
+								<span><?php echo $breadcrumb['title']; ?></span><?php if( $i < count($breadcrumbs) ) { ?>&nbsp;/&nbsp;<?php } ?>
 							<?php } ?>
 						</li>
-					<?php } ?>
+					<?php $i++; } ?>
 				</ul>
 			<?php } ?>
 			<div class="home-hero__content">
