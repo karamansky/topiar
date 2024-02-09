@@ -266,6 +266,7 @@ button {
   color: #fff;
 }
 
+.bg-texture,
 .texture-bg {
   background: #0a0a0a url("../img/bg.png") center center repeat;
   background-size: cover;
@@ -3021,6 +3022,210 @@ button {
   margin-bottom: 40px;
 }
 
+.blog {
+  padding: 120px 0 50px;
+}
+
+.blog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #0a0a0a;
+  margin-bottom: 36px;
+}
+
+.blog__item:hover .blog__link {
+  padding-left: 0;
+}
+
+.blog__item:hover .blog__link:before {
+  width: 0;
+}
+
+.blog__item:hover .blog__link:after {
+  width: 0;
+}
+
+.blog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 50%;
+  padding: 32px 32px 32px 48px;
+}
+
+.blog__date {
+  color: rgba(242, 242, 242, 0.5);
+  font-family: "Geometria", "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
+}
+
+.blog__title {
+  color: #F2F2F2;
+  font-family: "Geometria", "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #F2F2F2;
+  margin-bottom: 16px;
+}
+
+.blog__excerpt {
+  color: rgba(242, 242, 242, 0.75);
+  font-family: "Geometria", "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+}
+
+.blog__link {
+  display: inline-block;
+  color: #4F8552;
+  font-family: "Geometria", "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.75px;
+  margin-top: 30px;
+  padding: 0 13px 0 36px;
+  background: #0a0a0a;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  z-index: 2;
+}
+
+.blog__link:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #4F8552;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.blog__link:after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: rgba(242, 242, 242, 0.25);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.blog__image {
+  width: 50%;
+}
+
+.blog__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.blog__pagination .wp-pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.blog__pagination span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.blog__pagination a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #008237;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.blog__pagination .previouspostslink {
+  font-size: 0;
+  background: url("../img/icons/navigation-arrow-right-icon.svg") center center no-repeat;
+  background-size: 14px 22px;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.blog__pagination .nextpostslink {
+  font-size: 0;
+  background: url("../img/icons/navigation-arrow-right-icon.svg") center center no-repeat;
+  background-size: 14px 22px;
+}
+
 .footer {
   padding: 120px 0 30px;
   background: #0a0a0a url("../img/bg.png") center center no-repeat;
@@ -3373,6 +3578,10 @@ button {
 
   .portfolio__item-year {
     font-size: 16px;
+  }
+
+  .blog__link:after {
+    width: 60%;
   }
 
   .footer__menu {
@@ -3795,6 +4004,24 @@ button {
   .portfolio__item-overlay {
     background: rgba(0, 0, 0, 0.3);
     opacity: 1;
+  }
+
+  .blog__content {
+    padding: 24px;
+  }
+
+  .blog__link:after {
+    width: 50%;
+  }
+
+  .blog__pagination span {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .blog__pagination a {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .footer__social-item:not(:last-child) {
@@ -4360,6 +4587,57 @@ button {
 
   .text-page {
     padding: 30px 0 50px;
+  }
+
+  .blog {
+    padding: 50px 0;
+  }
+
+  .blog__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .blog__content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .blog__excerpt {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+  }
+
+  .blog__link:after {
+    display: none;
+  }
+
+  .blog__image {
+    width: 100%;
+  }
+
+  .blog__pagination span {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 10px;
+  }
+
+  .blog__pagination a {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 10px;
   }
 
   .footer {

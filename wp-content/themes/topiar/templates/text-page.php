@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Text Page
+ * Template Name: Page: Text
  */
 get_header();
 
