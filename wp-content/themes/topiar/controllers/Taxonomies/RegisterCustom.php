@@ -5,7 +5,7 @@ if( !defined( 'ABSPATH' ) ) exit;
 class RegisterCustom {
 
     public static $list_of_taxonomies = [
-        'category' => [ 'Category', 'Category', 'uslugi-kompanii', 'category_2' ],
+        'category' => [ 'Category', 'Category', 'catalog', 'uslugi-kompanii' ],
     ];
 
     public function __construct() {
@@ -35,20 +35,20 @@ class RegisterCustom {
                 "name"      => __( $label, "top-theme" ),
                 "menu_name" => __( $label, "top-theme" ),
             ],
-            "public"                => false,
-            "publicly_queryable"    => false,
+            "public"                => true,
+            "publicly_queryable"    => true,
             "hierarchical"          => true,
             "show_ui"               => true,
             "show_in_menu"          => true,
             "show_in_nav_menus"     => true,
             "query_var"             => true,
-            "rewrite"               => [ 'slug' => $slug ],
-            "show_admin_column"     => false,
+            "rewrite"               => [ 'slug' => $slug, 'hierarchical' => true ],
+            "show_admin_column"     => true,
             "show_in_rest"          => true,
-            "show_tagcloud"         => false,
+            "show_tagcloud"         => true,
             "rest_controller_class" => "WP_REST_Terms_Controller",
             "show_in_quick_edit"    => true,
-            "show_in_graphql"       => false,
+            "show_in_graphql"       => true,
             'meta_box_cb'           => 'post_categories_meta_box'
         ];
 

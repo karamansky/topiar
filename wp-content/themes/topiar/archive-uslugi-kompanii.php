@@ -4,7 +4,7 @@
 	*/
 	get_header(); ?>
 
-	<div id="container">
+	<div id="container" class="uslugi-kompanii archive">
 		<div id="content" role="main">
 
 			<?php the_post(); ?>

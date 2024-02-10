@@ -1,7 +1,6 @@
 <?php
-	/*
-	Template Name: Archive: Blog
-	*/
+	//tmp archive 
+
 	get_header();
 
 	$breadcrumbs = DisplayBreadcrumbs::prepareSubtitleItemsForAutomaticBreadcrumbs();

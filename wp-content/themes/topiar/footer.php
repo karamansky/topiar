@@ -106,6 +106,10 @@
 	</div>
 </div>
 
+
+<?php echo get_template_part('template-parts/partials/contact', 'popup'); ?>
+
+
 <?php wp_footer(); ?>
 
 </body>

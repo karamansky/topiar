@@ -84,6 +84,10 @@ button {
   cursor: pointer;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1275px;
@@ -569,12 +573,13 @@ button {
   width: 300px;
   position: absolute;
   top: 100%;
-  left: -15px;
-  padding: 5px 15px;
+  left: -30px;
+  padding: 5px 0;
   z-index: 98;
 }
 
 .header__menu ul .sub-menu .menu-item {
+  padding: 0 15px;
   margin-right: 0;
   display: block;
   width: 100%;
@@ -598,7 +603,7 @@ button {
   display: none;
   position: absolute;
   left: auto;
-  right: calc(-100% - 30px);
+  right: -100%;
   top: 0;
   z-index: 99;
 }
@@ -2691,6 +2696,270 @@ button {
   width: calc(100% - 410px);
 }
 
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(-101%);
+  -ms-transform: translateX(-101%);
+  transform: translateX(-101%);
+}
+
+.popup.tp-open {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.popup.tp-open .popup__block {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.popup__inner {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 200px;
+  width: 100%;
+  max-width: 950px;
+}
+
+.popup__block {
+  position: relative;
+  border-radius: 15px;
+  background: #E4E4E4;
+  padding: 80px 150px;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: translateX(-101%);
+  -ms-transform: translateX(-101%);
+  transform: translateX(-101%);
+}
+
+.popup__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 27px;
+  top: 20px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.popup__close:hover {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.popup__form {
+  position: relative;
+}
+
+.popup__form .input-wrap {
+  position: relative;
+}
+
+.popup__form .input-wrap:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.popup__form label {
+  display: block;
+  color: #484848;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+.popup__form input[type=text],
+.popup__form input[type=email],
+.popup__form input[type=tel] {
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+}
+
+.popup__form input[type=text]::-webkit-input-placeholder,
+.popup__form input[type=email]::-webkit-input-placeholder,
+.popup__form input[type=tel]::-webkit-input-placeholder {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+}
+
+.popup__form input[type=text]::-moz-placeholder,
+.popup__form input[type=email]::-moz-placeholder,
+.popup__form input[type=tel]::-moz-placeholder {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+}
+
+.popup__form input[type=text]:-ms-input-placeholder,
+.popup__form input[type=email]:-ms-input-placeholder,
+.popup__form input[type=tel]:-ms-input-placeholder {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+}
+
+.popup__form input[type=text]::-ms-input-placeholder,
+.popup__form input[type=email]::-ms-input-placeholder,
+.popup__form input[type=tel]::-ms-input-placeholder {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+}
+
+.popup__form input[type=text]::placeholder,
+.popup__form input[type=email]::placeholder,
+.popup__form input[type=tel]::placeholder {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+}
+
+.popup__form .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 80px;
+}
+
+.popup__form .wpcf7-spinner {
+  margin: 0;
+  position: absolute;
+  right: 13px;
+  top: 20px;
+}
+
+.popup__form .wpcf7 form .wpcf7-response-output {
+  max-width: 320px;
+  margin: 0 0 0 auto;
+  text-align: center;
+  color: #0a0a0a;
+}
+
+.popup__messengers {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.popup__messengers-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.popup__messenger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+}
+
+.popup__messenger.viber {
+  background: #fff url("../img/icons/viber.svg") center center no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+.popup__messenger.telegram {
+  background: url("../img/icons/telegram.svg") center center no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+.popup__messenger.whatsapp {
+  background: url("../img/icons/whatsapp.svg") center center no-repeat;
+  background-size: 100%;
+}
+
+.popup__messenger.email {
+  background: #fff url("../img/icons/email.svg") center center no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+
 .error-404 {
   background: #fff url("../img/404-bg.png") bottom left no-repeat;
   background-size: contain;
@@ -3920,6 +4189,23 @@ button {
     height: 450px;
   }
 
+  .popup__inner {
+    max-width: 90%;
+  }
+
+  .popup__block {
+    padding: 80px;
+  }
+
+  .popup__messengers-items {
+    max-width: 240px;
+  }
+
+  .popup__messenger {
+    width: 46px;
+    height: 46px;
+  }
+
   .portfolio__title {
     font-size: 60px;
     line-height: 1.15;
@@ -4514,6 +4800,31 @@ button {
 
   .contacts__map iframe {
     height: 450px;
+  }
+
+  .popup__inner {
+    top: 100px;
+  }
+
+  .popup__close {
+    right: 14px;
+    top: 14px;
+  }
+
+  .popup__form .btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+
+  .popup__block {
+    padding: 35px 30px;
+  }
+
+  .popup__messengers {
+    position: relative;
+    left: auto;
+    bottom: auto;
   }
 
   .error-404 {

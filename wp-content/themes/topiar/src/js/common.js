@@ -152,7 +152,37 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('a[href="#contact-popup"]').length ) {
+        jQuery(document).on('click', 'a[href="#contact-popup"]', function(e){
+            e.preventDefault();
 
+            const popupId = jQuery(this).attr('href');
+            jQuery('body').addClass('overflow-hidden');
+            jQuery(popupId).addClass('tp-open');
+        });
+    }
+
+
+    if( jQuery('.popup__close').length ) {
+        jQuery(document).on('click', '.popup__close', function(e){
+            e.preventDefault();
+
+            jQuery(this).parents('.popup').removeClass('tp-open');
+            jQuery('body').removeClass('overflow-hidden');
+        })
+    }
+
+
+    if( jQuery('.popup__block').length ) {
+        jQuery(document).mouseup( (e) => {
+            var div = jQuery(".popup__block");
+            if (!div.is(e.target)
+                && div.has(e.target).length === 0) {
+                div.parents('.popup').removeClass('tp-open');
+                jQuery('body').removeClass('overflow-hidden');
+            }
+        });
+    }
 
 
 

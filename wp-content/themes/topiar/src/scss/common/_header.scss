@@ -102,11 +102,12 @@
 			width: 300px;
 			position: absolute;
 			top: 100%;
-			left: -15px;
-			padding: 5px 15px;
+			left: -30px;
+			padding: 5px 0;
 			z-index: 98;
 
 			.menu-item {
+				padding: 0 15px;
 				margin-right: 0;
 				display: block;
 				width: 100%;
@@ -128,7 +129,7 @@
 
 				position: absolute;
 				left: auto;
-				right: calc(-100% - 30px);
+				right: -100%;
 				top: 0;
 				z-index: 99;
 			}

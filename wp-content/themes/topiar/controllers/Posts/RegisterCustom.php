@@ -16,7 +16,7 @@ class RegisterCustom {
         if( !function_exists( 'register_post_type' ) ) return;
 
         static::registerCustomPostTypeSingle( 'portfolio', __('Портфоліо', 'tp'), __('Портфоліо', 'tp'), 'portfolio', true );
-        static::registerCustomPostTypeSingle( 'uslugi-kompanii', __('Послуги', 'tp'), __('Послуга', 'tp'), 'uslugi-kompanii', true );
+        static::registerCustomPostTypeSingle( 'catalog', __('Послуги', 'tp'), __('Послуга', 'tp'), 'catalog', true );
     }
 
     static public function registerCustomPostTypeSingle( $type_name, $label, $singular, $slug = '', $has_archive = false, $supports = [] ) {
@@ -42,7 +42,7 @@ class RegisterCustom {
             "exclude_from_search" => false,
             "capability_type"     => "page",
             "hierarchical"        => true,
-            "rewrite"             => [ "slug" => $slug ],
+            "rewrite"             => [ "slug" => $slug, 'hierarchical' => true ],
             "query_var"           => true,
             "supports"            => $supports
         ];
