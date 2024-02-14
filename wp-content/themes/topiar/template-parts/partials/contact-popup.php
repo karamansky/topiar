@@ -1,4 +1,5 @@
 <?php
+	$popup_form_shortcode = get_field('popup_form_shortcode', 'option');
 	$viber = get_field('viber', 'option');
 	$telegram = get_field('telegram', 'option');
 	$whatsapp = get_field('whatsapp', 'option');
@@ -27,7 +28,9 @@
 				</svg>
 			</a>
 			<div class="popup__form">
-				<?php echo do_shortcode('[contact-form-7 id="9a2920d" title="Contact popup form"]'); ?>
+				<?php if( !empty($popup_form_shortcode) ) {
+					echo do_shortcode($popup_form_shortcode);
+				} ?>
 				<?php if( !empty($viber) || !empty($telegram) || !empty($whatsapp) || !empty($email) ) { ?>
 					<div class="popup__messengers">
 						<label><?php _e('Напишіть нам', 'tp'); ?></label>

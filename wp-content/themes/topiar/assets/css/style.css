@@ -604,7 +604,7 @@ button {
   position: absolute;
   left: auto;
   right: -100%;
-  top: 0;
+  top: -5px;
   z-index: 99;
 }
 
@@ -2587,7 +2587,7 @@ button {
 }
 
 .contacts {
-  padding: 164px 0;
+  padding: 164px 0 205px;
 }
 
 .contacts__inner {
@@ -2741,7 +2741,7 @@ button {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  top: 200px;
+  top: 100px;
   width: 100%;
   max-width: 950px;
 }
