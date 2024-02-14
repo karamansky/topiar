@@ -309,6 +309,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'steps',
+				'title'       => 'Steps block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'image-filter' ],
+				'keywords'    => [ 'etapy', 'steps', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'steps-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
