@@ -2,7 +2,6 @@
 
 	require_once( get_stylesheet_directory().'/controllers/main.php' );
 
-
 //
 //	add_filter('post_link', 'true_post_type_permalink', 20, 3);
 //	add_filter('post_type_link', 'true_post_type_permalink', 20, 3);
@@ -10,18 +9,18 @@
 //	function true_post_type_permalink( $permalink, $post_id, $leavename ) {
 //
 //		$post_type_name = 'uslugi-kompanii'; // название типа записи, вы можете найти его в админке или в функции register_post_type()
-//		$post_type_slug = 'uslugi-kompanii'; // часть URL , не всегда совпадает с названием типа записи!
-//		$tax_name = 'category_2'; // ну это понятно, название таксономии - категории
+//		$post_type_slug = 'uslugi-kompanii'; // часть URL товаров, не всегда совпадает с названием типа записи!
+//		$tax_name = 'category'; // ну это понятно, название таксономии - категории товаров
 //
 //		$post = get_post( $post_id ); // получаем объект поста по его ID
 //
 //		if ( strpos( $permalink, $post_type_slug ) === FALSE || $post->post_type != $post_type_name ) // не делаем никаких изменений, если тип записи не соответствует или если URL не содержит ярлык tovar
 //			return $permalink;
 //
-//		$termini = wp_get_object_terms( $post->ID, $tax_name ); // получаем все категории, к которым принадлежит данный пост
+//		$termini = wp_get_object_terms( $post->ID, $tax_name ); // получаем все категории, к которым принадлежит данный товар
 //
 //
-//		if ( !is_wp_error( $termini ) && !empty( $termini ) && is_object( $termini[0] ) ) // и делаем перезапись ссылки, только, если пост находится хотя бы в одной категории, иначе возвращаем ссылку по умолчанию
+//		if ( !is_wp_error( $termini ) && !empty( $termini ) && is_object( $termini[0] ) ) // и делаем перезапись ссылки, только, если товар находится хотя бы в одной категории, иначе возвращаем ссылку по умолчанию
 //			$permalink = str_replace( $post_type_slug, $termini[0]->slug, $permalink );
 //
 //		return $permalink;
@@ -33,25 +32,22 @@
 //	function true_post_type_request( $query ){
 //		global $wpdb; // нам немного придётся поработать с БД
 //
-//		$post_type_name = 'uslugi-kompanii'; // указываем тут название типа записей
-//		$tax_name = 'category_2'; // а также название таксономии - категории
+//		$post_type_name = 'uslugi-kompanii'; // указываем тут название типа записей товара
+//		$tax_name = 'category'; // а также название таксономии - категории товаров
 //
-//		if( isset($query['attachment']) ){
-//			$yarlik = $query['attachment']; // после того, как мы изменили ссылки  в предыдущей функции, WordPress начал принимать их за страницы вложений
+//		$yarlik = $query['attachment']; // после того, как мы изменили ссылки товаров в предыдущей функции, WordPress начал принимать их за страницы вложений
 //
-//			// а теперь давайте получим ID , ярлык которого соответствует запросу на странице
-//			$post_id = $wpdb->get_var(
+//		// а теперь давайте получим ID товара, ярлык которого соответствует запросу на странице
+//		$post_id = $wpdb->get_var(
 //			"
-//					SELECT ID
-//					FROM $wpdb->posts
-//					WHERE post_name = '$yarlik'
-//					AND post_type = '$post_type_name'
-//				"
-//			);
+//		SELECT ID
+//		FROM $wpdb->posts
+//		WHERE post_name = '$yarlik'
+//		AND post_type = '$post_type_name'
+//		"
+//		);
 //
-//			$termini = wp_get_object_terms( $post_id, $tax_name ); //  должен находиться в категории (одной или нескольких)
-//
-//		}
+//		$termini = wp_get_object_terms( $post_id, $tax_name ); // товар должен находиться в категории (одной или нескольких)
 //
 //
 //		if( isset( $yarlik ) && $post_id && !is_wp_error( $termini ) && !empty( $termini ) ) : // изменяем запрос, если всё ок
@@ -67,13 +63,14 @@
 //	}
 //
 //
+//
 //	add_action('template_redirect', 'true_post_type_redirect');
 //
 //	function true_post_type_redirect() {
 //
 //		$post_type_name = 'uslugi-kompanii'; // как и в первом шаге, указываем тут название типа записи
 //		$post_type_slug = 'uslugi-kompanii'; // тут ярлык, то есть то, что в URL
-//		$tax_name = 'category_2'; // и название таксономии
+//		$tax_name = 'category'; // и название таксономии
 //
 //		if( strpos( $_SERVER['REQUEST_URI'], $post_type_slug ) === FALSE) // выходим из функции ничего не делая, если URL не содержит ярлыка типа записи "tovar"
 //			return;
@@ -81,7 +78,7 @@
 //		if( is_singular( $post_type_name ) ) : // функцию выполняем только на страницах записей данного типа
 //			global $post, $wp_rewrite;
 //
-//			$termini = wp_get_object_terms( $post->ID, $tax_name ); // опять проверяем  на наличие категорий
+//			$termini = wp_get_object_terms( $post->ID, $tax_name ); // опять проверяем товар на наличие категорий
 //
 //			if ( !is_wp_error( $termini ) && !empty( $termini ) && is_object( $termini[0] ) ) :
 //
@@ -93,3 +90,4 @@
 //		endif;
 //
 //	}
+

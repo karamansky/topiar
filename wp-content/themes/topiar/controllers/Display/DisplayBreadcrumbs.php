@@ -101,6 +101,7 @@ class DisplayBreadcrumbs {
 		} elseif ( is_tax() ) {
 			global $wp_query;
 			$term = $wp_query->get_queried_object();
+
 			if( !empty($term) ){
 				$taxonomy = $term->taxonomy;
 
@@ -116,6 +117,13 @@ class DisplayBreadcrumbs {
 								'title' => $tmp_term->name
 							];
 						}
+					}
+
+					if ( $taxonomy == 'portfolio_category' ){
+						$subtitle_items[] = [
+							'url'   => 'portfolio',
+							'title' => __('Портфоліо', 'tp')
+						];
 					}
 				}
 

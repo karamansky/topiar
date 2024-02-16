@@ -42,7 +42,7 @@ class RegisterCustom {
             "exclude_from_search" => false,
             "capability_type"     => "page",
             "hierarchical"        => true,
-            "rewrite"             => [ "slug" => $slug, 'hierarchical' => true ],
+            "rewrite"             => [ "slug" => $slug, 'hierarchical' => true, 'with_front' => true ],
             "query_var"           => true,
             "supports"            => $supports
         ];

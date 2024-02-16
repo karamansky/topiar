@@ -5,7 +5,8 @@ if( !defined( 'ABSPATH' ) ) exit;
 class RegisterCustom {
 
     public static $list_of_taxonomies = [
-        'category' => [ 'Category', 'Category', 'catalog', 'uslugi-kompanii' ],
+        'category' 				=> [ 'Category', 'Category', 'catalog', 'uslugi-kompanii' ],
+        'portfolio_category' 	=> [ 'Категорія', 'Категорія', 'portfolio', 'portfolio_category' ],
     ];
 
     public function __construct() {
@@ -37,7 +38,7 @@ class RegisterCustom {
             ],
             "public"                => true,
             "publicly_queryable"    => true,
-            "hierarchical"          => true,
+            "hierarchical"          => false,
             "show_ui"               => true,
             "show_in_menu"          => true,
             "show_in_nav_menus"     => true,
