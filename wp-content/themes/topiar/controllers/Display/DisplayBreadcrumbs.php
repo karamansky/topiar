@@ -15,7 +15,7 @@ class DisplayBreadcrumbs {
 		if( !is_front_page() ) {
 			$subtitle_items[] = [
 				'url'   => get_home_url(),
-				'title' => __('Головна', 'top')
+				'title' => __('Головна', 'tp')
 			];
 		}
 
@@ -30,6 +30,14 @@ class DisplayBreadcrumbs {
 						$subtitle_items[] = [
 							'url' => $post_type_archive,
 							'title' => $post_type->labels->name
+						];
+					}
+
+					if( get_post_type() == 'portfolio' ) {
+						$terms = get_the_terms(get_the_ID(), 'portfolio_category');
+						$subtitle_items[] = [
+							'url' => get_term_link($terms[0]->term_id),
+							'title' => $terms[0]->name
 						];
 					}
 				}
@@ -120,9 +128,13 @@ class DisplayBreadcrumbs {
 					}
 
 					if ( $taxonomy == 'portfolio_category' ){
+						$post_type = get_post_type( get_the_ID() );
+						$post_type_link = get_post_type_archive_link($post_type);
+						$post_type_name = get_post_type_object($post_type)->labels->singular_name;
+
 						$subtitle_items[] = [
-							'url'   => 'portfolio',
-							'title' => __('Портфоліо', 'tp')
+							'url'   => $post_type_link,
+							'title' => $post_type_name
 						];
 					}
 				}
@@ -172,7 +184,7 @@ class DisplayBreadcrumbs {
 		} elseif ( is_search() ) {
 			$subtitle_items[] = [
 				'url'   => '',
-				'title' => 'Search'
+				'title' => __('Пошук', 'tp')
 			];
 		} elseif ( is_404() ) {
 			$subtitle_items[] = [
