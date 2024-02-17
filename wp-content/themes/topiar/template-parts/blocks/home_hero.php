@@ -16,23 +16,25 @@
 <section class="home-hero" <?php echo DisplayGlobal::generateStyleWithBgImageOrNothing( $background ); ?> >
 	<div class="wrapper">
 		<div class="home-hero__inner">
-			<?php if( !empty($breadcrumbs) ) { ?>
-				<ul class="breadcrumbs">
-					<?php $i = 1; foreach ($breadcrumbs as $breadcrumb) { ?>
-						<li class="breadcrumbs__item">
-							<?php if( !empty($breadcrumb['url']) ) { ?>
-								<a href="<?php echo $breadcrumb['url'] ?>"><?php echo $breadcrumb['title']; ?></a><?php if( $i < count($breadcrumbs) ) { ?>&nbsp;/&nbsp;<?php } ?>
-							<?php } else { ?>
-								<span><?php echo $breadcrumb['title']; ?></span><?php if( $i < count($breadcrumbs) ) { ?>&nbsp;/&nbsp;<?php } ?>
-							<?php } ?>
-						</li>
-					<?php $i++; } ?>
-				</ul>
-			<?php } ?>
 			<div class="home-hero__content">
-				<?php if( !empty($title) ) { ?>
-					<h1 class="home-hero__title"><?php echo $title ?></h1>
-				<?php } ?>
+				<div class="home-hero__top">
+					<?php if( !empty($breadcrumbs) ) { ?>
+						<ul class="breadcrumbs">
+							<?php $i = 1; foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li class="breadcrumbs__item">
+									<?php if( !empty($breadcrumb['url']) ) { ?>
+										<a href="<?php echo $breadcrumb['url'] ?>"><?php echo $breadcrumb['title']; ?></a><?php if( $i < count($breadcrumbs) ) { ?>&nbsp;/&nbsp;<?php } ?>
+									<?php } else { ?>
+										<span><?php echo $breadcrumb['title']; ?></span><?php if( $i < count($breadcrumbs) ) { ?>&nbsp;/&nbsp;<?php } ?>
+									<?php } ?>
+								</li>
+								<?php $i++; } ?>
+						</ul>
+					<?php } ?>
+					<?php if( !empty($title) ) { ?>
+						<h1 class="home-hero__title"><?php echo $title ?></h1>
+					<?php } ?>
+				</div>
 				<?php if( !empty($button1) || !empty($button2) ) { ?>
 					<div class="home-hero__buttons">
 						<?php DisplayGlobal::renderAcfLink( $button1, 'btn btn--white home-hero__btn' ) ?>
