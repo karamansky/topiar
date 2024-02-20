@@ -33,7 +33,14 @@
             {
                 "param": "taxonomy",
                 "operator": "==",
-                "value": "category"
+                "value": "catalog_category"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "portfolio_category"
             }
         ]
     ],
@@ -46,5 +53,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705865791
+    "modified": 1708358097
 }

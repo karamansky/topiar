@@ -22,13 +22,16 @@ $controllers = [
     'Archive'      => [
         'ArchiveDisplay'
     ],
-    'Posts'        => [
-        'PostsLoop',
-        'RegisterCustom'
-    ],
     'Taxonomies'   => [
         'RegisterCustom',
         'TaxonomiesQuery'
+    ],
+	'Posts'        => [
+		'PostsLoop',
+		'RegisterCustom'
+	],
+    'Url'   => [
+        'UrlSettings',
     ],
 ];
 

@@ -15,41 +15,65 @@ class RegisterCustom {
     public function registerCustomPostTypes() {
         if( !function_exists( 'register_post_type' ) ) return;
 
-        static::registerCustomPostTypeSingle( 'portfolio', __('Портфоліо', 'tp'), __('Портфоліо', 'tp'), 'portfolio', true );
-        static::registerCustomPostTypeSingle( 'catalog', __('Послуги', 'tp'), __('Послуга', 'tp'), 'catalog', true );
+		//register catalog type
+		register_post_type( 'uslugi-kompanii', [
+			"label"               => __( 'Послуги', 'tp' ),
+			"labels"              => [
+				"name"          	 => __( 'Послуги', 'tp' ),
+				"singular_name" 	 => __( 'Послуга', 'tp' ),
+				'add_new'            => __( 'Додати послугу', 'tp' ),
+				'add_new_item'       => __( 'Додати послугу', 'tp' ),
+				'edit_item'          => __( 'Редагувати послугу', 'tp' ),
+				'new_item'           => __( 'Нова послуга', 'tp' ),
+				'view_item'          => __( 'Переглянути послугу', 'tp' ),
+				'search_items'       => __( 'Шукати послугу', 'tp' ),
+				'not_found'          => __( 'Не знайдено', 'tp' ),
+				'not_found_in_trash' => __( 'Не знайдено в корзині', 'tp' ),
+			],
+			"description"         => "",
+			"public"              => true,
+			"publicly_queryable"  => true,
+			"show_ui"             => true,
+			"has_archive"         => 'uslugi-kompanii',
+			"show_in_menu"        => true,
+			"show_in_rest"        => true, // To use Gutenberg editor.
+			"show_in_nav_menus"   => true,
+			"menu_icon"           => "dashicons-format-aside",
+			"delete_with_user"    => false,
+			"exclude_from_search" => false,
+			"capability_type"     => "post",
+			"hierarchical"        => true,
+			"rewrite"             => [ 'slug' => 'uslugi-kompanii/%catalog_category%', 'with_front' => false ],
+			"query_var"           => true,
+			"supports"            => []
+		] );
+
+
+		//register portfolio type
+		register_post_type( 'portfolio', [
+			"label"               => __( 'Портфоліо', 'tp' ),
+			"labels"              => [
+				"name"          => __( 'Портфоліо', 'tp' ),
+				"singular_name" => __( 'Портфоліо', 'tp' ),
+			],
+			"description"         => "",
+			"public"              => true,
+			"publicly_queryable"  => true,
+			"show_ui"             => true,
+			"has_archive"         => true,
+			"show_in_menu"        => true,
+			"show_in_rest"        => true, // To use Gutenberg editor.
+			"show_in_nav_menus"   => true,
+			"menu_icon"           => "dashicons-format-aside",
+			"delete_with_user"    => false,
+			"exclude_from_search" => false,
+			"capability_type"     => "page",
+			"hierarchical"        => true,
+			"rewrite"             => [ "slug" => 'portfolio', 'hierarchical' => true,  ],
+			"query_var"           => true,
+			"supports"            => []
+		] );
     }
-
-    static public function registerCustomPostTypeSingle( $type_name, $label, $singular, $slug = '', $has_archive = false, $supports = [] ) {
-        $slug = !empty( $slug ) ? $slug : $type_name;
-        $supports = !empty( $supports ) ? $supports : [ "title", "editor", "excerpt", "thumbnail", "author", "page-attributes" ];
-
-        $args = [
-            "label"               => __( $label, "top" ),
-            "labels"              => [
-                "name"          => __( $label, "top" ),
-                "singular_name" => __( $singular, "top" ),
-            ],
-            "description"         => "",
-            "public"              => true,
-            "publicly_queryable"  => true,
-            "show_ui"             => true,
-            "has_archive"         => $has_archive,
-            "show_in_menu"        => true,
-            "show_in_rest"        => true, // To use Gutenberg editor.
-            "show_in_nav_menus"   => true,
-            "menu_icon"           => "dashicons-format-aside",
-            "delete_with_user"    => false,
-            "exclude_from_search" => false,
-            "capability_type"     => "page",
-            "hierarchical"        => true,
-            "rewrite"             => [ "slug" => $slug, 'hierarchical' => true, 'with_front' => true ],
-            "query_var"           => true,
-            "supports"            => $supports
-        ];
-
-        register_post_type( $type_name, $args );
-    }
-
 }
 
 new RegisterCustom();

@@ -27,13 +27,13 @@
 						<?php
 							foreach ($services_items as $item) {
 								$style = '';
-								$title = $item['taxonomy']->name;
-								$image = get_field( 'image', 'term_'.$item['taxonomy']->term_id );
+//								$title = $item['taxonomy']->name;
+//								$image = get_field( 'image', 'term_'.$item['taxonomy']->term_id );
 								if( !empty($image) ) {
 									$style = 'background-image: url('. $image['url'] .')';
 								}
 								?>
-								<a href="<?php echo get_term_link( $item['taxonomy']->term_id ); ?>" class="services-block__item" style="<?php echo $style; ?>">
+								<a href="<?php //echo get_term_link( $item['taxonomy']->term_id ); ?>" class="services-block__item" style="<?php echo $style; ?>">
 									<div class="services-block_item-content">
 										<?php if( !empty($title) ) { ?>
 											<div class="services-block__item-title"><?php echo $title; ?></div>
