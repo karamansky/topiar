@@ -67,9 +67,9 @@ class RegisterCustom {
 			"menu_icon"           => "dashicons-format-aside",
 			"delete_with_user"    => false,
 			"exclude_from_search" => false,
-			"capability_type"     => "page",
+			"capability_type"     => "post",
 			"hierarchical"        => true,
-			"rewrite"             => [ "slug" => 'portfolio' ],
+//			"rewrite"             => [ "slug" => 'portfolio' ],
 			"query_var"           => true,
 			"supports"            => []
 		] );

@@ -47,7 +47,7 @@ class RegisterCustom {
 			'capabilities'          => [],
 			'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
 			'show_admin_column'     => true, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
-			'show_in_rest'          => null, // добавить в REST API
+			'show_in_rest'          => true, // показівать при редактировании поста, добавить в REST API
 			'rest_base'             => null, // $taxonomy
 			// '_builtin'              => false,
 			//'update_count_callback' => '_update_post_term_count',
@@ -74,13 +74,13 @@ class RegisterCustom {
 			],
 			'description'           => '', // описание таксономии
 			'public'                => true,
-			'hierarchical'          => false,
-			'rewrite'               => [ 'slug' => 'portfolio', 'with_front' => false ],
+			'hierarchical'          => true,
+			'rewrite'               => [ 'with_front' => false ],
 			//'query_var'             => $taxonomy, // название параметра запроса
 			'capabilities'          => [],
 			'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
 			'show_admin_column'     => true, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
-			'show_in_rest'          => null, // добавить в REST API
+			'show_in_rest'          => true, // показівать при редактировании поста, добавить в REST API
 			'rest_base'             => null, // $taxonomy
 			// '_builtin'              => false,
 			//'update_count_callback' => '_update_post_term_count',
