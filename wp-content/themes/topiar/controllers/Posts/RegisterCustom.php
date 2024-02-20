@@ -34,7 +34,7 @@ class RegisterCustom {
 			"public"              => true,
 			"publicly_queryable"  => true,
 			"show_ui"             => true,
-			"has_archive"         => 'uslugi-kompanii',
+			"has_archive"         => 'uslugi-kompanii',  //set archive url
 			"show_in_menu"        => true,
 			"show_in_rest"        => true, // To use Gutenberg editor.
 			"show_in_nav_menus"   => true,
@@ -69,7 +69,7 @@ class RegisterCustom {
 			"exclude_from_search" => false,
 			"capability_type"     => "page",
 			"hierarchical"        => true,
-			"rewrite"             => [ "slug" => 'portfolio', 'hierarchical' => true,  ],
+			"rewrite"             => [ "slug" => 'portfolio' ],
 			"query_var"           => true,
 			"supports"            => []
 		] );

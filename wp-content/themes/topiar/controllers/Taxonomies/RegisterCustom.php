@@ -75,7 +75,7 @@ class RegisterCustom {
 			'description'           => '', // описание таксономии
 			'public'                => true,
 			'hierarchical'          => false,
-			//'rewrite'               => [ 'slug' => 'slug', 'hierarchical' => true ],
+			'rewrite'               => [ 'slug' => 'portfolio', 'with_front' => false ],
 			//'query_var'             => $taxonomy, // название параметра запроса
 			'capabilities'          => [],
 			'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
