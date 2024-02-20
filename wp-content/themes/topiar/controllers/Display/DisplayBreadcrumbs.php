@@ -33,6 +33,26 @@ class DisplayBreadcrumbs {
 						];
 					}
 
+					if( get_post_type() == 'uslugi-kompanii' ) {
+						$terms = get_the_terms(get_the_ID(), 'catalog_category');
+
+						foreach ( $terms as $item ) {
+							if ( $item->parent != 0 ) {
+								$term_parent = get_term( $item->parent );
+								$subtitle_items[] = [
+									'url' => get_term_link($item->parent),
+									'title' => $term_parent->name
+								];
+							}
+
+							$subtitle_items[] = [
+								'url' => get_term_link($item->term_id),
+								'title' => $item->name
+							];
+						}
+
+					}
+
 					if( get_post_type() == 'portfolio' ) {
 						$terms = get_the_terms(get_the_ID(), 'portfolio_category');
 						$subtitle_items[] = [
@@ -115,6 +135,17 @@ class DisplayBreadcrumbs {
 
 				if( !empty($taxonomy) ){
 					$ancestors = get_ancestors( $term->term_id, $taxonomy, 'taxonomy' );
+
+					if ( $taxonomy == 'catalog_category' ){
+						$post_type = get_post_type( get_the_ID() );
+						$post_type_link = get_post_type_archive_link($post_type);
+						$post_type_name = get_post_type_object($post_type)->labels->name;
+
+						$subtitle_items[] = [
+							'url'   => $post_type_link,
+							'title' => $post_type_name
+						];
+					}
 
 					if ( !empty($ancestors) ) {
 						$ancestors = array_reverse($ancestors);
