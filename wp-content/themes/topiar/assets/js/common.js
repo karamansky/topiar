@@ -185,7 +185,28 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.filter-bar__filter').length ) {
+        jQuery(document).on('click', '.filter-bar__filter', function(e){
+            e.preventDefault();
 
+            jQuery(this).find('.filter-bar__dropdown').slideToggle();
+        });
+
+        jQuery(document).on('click', '.filter-bar__view', function(e){
+            e.preventDefault();
+
+            jQuery('.filter-bar__view').removeClass('tp-active');
+            jQuery(this).addClass('tp-active');
+
+            if( jQuery(this).hasClass('filter-bar--table') ) {
+                jQuery(this).parents('.wrapper').find('#tp-view').attr('class', 'table-view');
+            } else if( jQuery(this).hasClass('filter-bar--grid') ) {
+                jQuery(this).parents('.wrapper').find('#tp-view').attr('class', 'grid-view');
+            } else if( jQuery(this).hasClass('filter-bar--list') ) {
+                jQuery(this).parents('.wrapper').find('#tp-view').attr('class', 'list-view');
+            }
+        })
+    }
 
 
 
