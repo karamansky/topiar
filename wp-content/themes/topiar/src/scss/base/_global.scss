@@ -375,6 +375,15 @@ button {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 100px;
+
+	@media ($br_point_tablet) {
+		font-size: 54px;
+	}
+
+	@media ($br_point_phone) {
+		font-size: 40px;
+		line-height: 1.15;
+	}
 }
 
 .text-content {
@@ -595,6 +604,40 @@ button {
 				letter-spacing: 0.28px;
 				text-decoration: none;
 			}
+		}
+	}
+}
+
+
+
+
+@media ($br_point_phone) {
+	.filter-bar__view:not(:last-of-type) {
+		margin-right: 10px;
+	}
+}
+
+
+
+@media ($br_point_small_phone) {
+	.filter-bar__view:not(:last-of-type) {
+		margin-right: 5px;
+	}
+
+	.filter-bar__filter {
+		width: 150px;
+
+		span {
+			display: flex;
+			align-items: center;
+			text-align: left;
+			padding-left: 10px;
+			padding-right: 25px;
+			width: 100%;
+			font-size: 12px;
+			line-height: 1.1;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 		}
 	}
 }
