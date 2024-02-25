@@ -14,9 +14,9 @@
 	<div class="wrapper">
 		<div class="reviews__inner">
 			<?php if( !empty($title) ) { ?>
-				<h2 class="reviews__title"><?php echo $title ?></h2>
+				<h2 class="reviews__title" data-aos="fade-up"><?php echo $title ?></h2>
 			<?php } ?>
-			<div class="reviews__items">
+			<div class="reviews__items" data-aos="fade-up">
 				<?php foreach ($reviews as $item) { ?>
 					<div class="reviews__item">
 						<div class="reviews__item-header">

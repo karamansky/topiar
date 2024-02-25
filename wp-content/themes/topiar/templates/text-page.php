@@ -5,7 +5,7 @@
 get_header();
 
 ?>
-<main class="main">
+<main class="main" data-aos="fade-up">
 	<div class="text-page">
 		<div class="wrapper">
 			<div class="text-page__inner">

@@ -3,7 +3,7 @@
 
 	if( !empty($breadcrumbs) ) {
 ?>
-	<ul class="breadcrumbs">
+	<ul class="breadcrumbs" data-aos="fade-up">
 		<?php $i = 1; foreach ($breadcrumbs as $breadcrumb) { ?>
 			<li class="breadcrumbs__item">
 				<?php if( !empty($breadcrumb['url']) ) { ?>

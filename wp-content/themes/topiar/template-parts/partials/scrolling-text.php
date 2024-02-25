@@ -4,7 +4,7 @@
 
 	if( empty($text) ) return false;
 ?>
-<section class="scrolling-text">
+<section class="scrolling-text" data-aos="fade-up">
 	<div class="wrapper">
 		<div class="scrolling-text__inner">
 			<div class="scrolling-text__header">

@@ -12,9 +12,9 @@
 
 				<?php echo get_template_part('template-parts/partials/breadcrumbs'); ?>
 
-				<h1 class="page-title vendors__title"><?php the_title(); ?></h1>
+				<h1 class="page-title vendors__title" data-aos="fade-up"><?php the_title(); ?></h1>
 
-				<div class="filter-bar">
+				<div class="filter-bar" data-aos="fade-up">
 					<div class="filter-bar__views">
 						<a href="#" class="filter-bar__view filter-bar--table">
 							<i class="icon table-view-icon"></i>
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 
-				<div id="tp-view" class="grid-view">
+				<div id="tp-view" class="grid-view" data-aos="fade-up">
 					<div class="vendors__items">
 						<a href="#" class="vendors__item">
 							<div class="vendors__item-image">

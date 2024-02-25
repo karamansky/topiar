@@ -13,11 +13,11 @@
 ?>
 <div class="image-right">
 	<?php if( !empty($image) ) { ?>
-		<div class="image-right__image">
+		<div class="image-right__image" data-aos="fade-up">
 			<?php DisplayGlobal::renderAcfImage( $image ); ?>
 		</div>
 	<?php } ?>
-	<div class="wrapper">
+	<div class="wrapper" data-aos="fade-up">
 		<div class="image-right__inner">
 			<div class="image-right__content">
 				<?php if( !empty($title) ) { ?>

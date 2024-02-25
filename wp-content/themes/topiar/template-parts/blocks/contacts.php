@@ -21,7 +21,7 @@
 
 	if( empty($title) && empty($address) && empty($phones) ) return false;
 ?>
-<section class="contacts texture-bg">
+<section class="contacts texture-bg" data-aos="fade-up">
 	<div class="wrapper">
 		<div class="contacts__inner">
 			<div class="contacts__main">

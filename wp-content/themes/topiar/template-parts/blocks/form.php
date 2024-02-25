@@ -15,10 +15,10 @@
 	<div class="wrapper">
 		<div class="form-block__inner">
 			<?php if( !empty($title) ) { ?>
-				<h2 class="form-block__title"><?php echo $title ?></h2>
+				<h2 class="form-block__title" data-aos="fade-up"><?php echo $title ?></h2>
 			<?php } ?>
 			<?php if( !empty($form) ) { ?>
-				<div class="form-block__form">
+				<div class="form-block__form" data-aos="fade-up">
 					<?php if( !empty($form_title) ) { ?>
 						<h3 class="form-block__form-title"><?php echo $form_title; ?></h3>
 					<?php } ?>

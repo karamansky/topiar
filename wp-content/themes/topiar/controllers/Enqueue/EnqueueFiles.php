@@ -22,6 +22,7 @@ class EnqueueFiles {
 	 */
 	public function enqueueScripts() {
 		$get_template_directory_uri = get_template_directory_uri();
+		wp_enqueue_style( 'aos-styles', $get_template_directory_uri . '/assets/libs/aos/aos.css');
 		wp_enqueue_style( 'slick-theme-styles', $get_template_directory_uri . '/assets/libs/slick/slick-theme.css');
 		wp_enqueue_style( 'slick-styles', $get_template_directory_uri . '/assets/libs/slick/slick.css');
 		wp_enqueue_style( 'simplebar-styles', $get_template_directory_uri . '/assets/libs/simplebar/simplebar.css');
@@ -30,6 +31,7 @@ class EnqueueFiles {
 
 		//scripts
 //		wp_enqueue_script('top-script', $get_template_directory_uri . '/assets/libs/jquery.min.js', ['jquery'], '', true);
+		wp_enqueue_script('aos-script', $get_template_directory_uri . '/assets/libs/aos/aos.js', ['jquery'], '', true);
 		wp_enqueue_script('slick-script', $get_template_directory_uri . '/assets/libs/slick/slick.min.js', ['jquery'], '', true);
 		wp_enqueue_script('simplebar-script', $get_template_directory_uri . '/assets/libs/simplebar/simplebar.min.js', ['jquery'], '', true);
 		wp_enqueue_script('top-script', $get_template_directory_uri . '/assets/js/common.js', ['jquery'], filemtime( get_stylesheet_directory() . '/assets/js/common.js' ), true);

@@ -14,11 +14,11 @@
 	<div class="wrapper">
 		<div class="team__inner">
 			<?php if( !empty($title) ) { ?>
-				<h2 class="team__title"><?php echo $title ?></h2>
+				<h2 class="team__title" data-aos="fade-up"><?php echo $title ?></h2>
 			<?php } ?>
 			<div class="team__items">
 				<?php foreach ($team as $item) { ?>
-					<div class="team__item">
+					<div class="team__item" data-aos="fade-up">
 						<?php if( !empty($item['photo']) ) { ?>
 							<div class="team__item-image">
 								<?php DisplayGlobal::renderAcfImage($item['photo']); ?>

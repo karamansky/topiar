@@ -13,14 +13,14 @@
 ?>
 <div class="services-block">
 	<div class="wrapper">
-		<div class="services-block__header">
+		<div class="services-block__header" data-aos="fade-up">
 			<?php if( !empty($title) ) { ?>
 				<h2 class="section-title services-block__title">
 					<?php echo $title; ?>
 				</h2>
 			<?php } ?>
 		</div>
-		<div class="wrapper--small">
+		<div class="wrapper--small" data-aos="fade-up">
 			<div class="services-block__inner">
 				<?php if( !empty($services_items) ) { ?>
 					<div class="services-block__items">

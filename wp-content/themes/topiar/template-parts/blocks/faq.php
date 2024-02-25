@@ -17,7 +17,7 @@
 
 	if( empty($faq) ) return false;
 ?>
-<section class="faq <?php echo $position_class; ?>" <?php echo DisplayGlobal::generateStyleWithBgImageOrNothing( $background ); ?> >
+<section class="faq <?php echo $position_class; ?>" <?php echo DisplayGlobal::generateStyleWithBgImageOrNothing( $background ); ?> data-aos="fade-up">
 	<div class="wrapper">
 		<div class="faq__inner">
 			<div class="faq__left">

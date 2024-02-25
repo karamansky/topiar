@@ -15,7 +15,7 @@
 <div class="portfolio-block">
 	<div class="wrapper">
 		<div class="portfolio-block__inner">
-			<div class="portfolio-block__header">
+			<div class="portfolio-block__header" data-aos="fade-up">
 				<?php if( !empty($title) ) { ?>
 					<h2 class="section-title portfolio-block__title">
 						<?php echo $title; ?>
@@ -28,7 +28,7 @@
 				<?php } ?>
 			</div>
 			<?php if( !empty($portfolio_items) ) { ?>
-				<div class="portfolio-block__items">
+				<div class="portfolio-block__items" data-aos="fade-up">
 					<?php
 						foreach ($portfolio_items as $item) {
 							$style = '';

@@ -9,7 +9,7 @@
 
 	if( empty($numbers) ) return false;
 ?>
-<section class="numbers">
+<section class="numbers" data-aos="fade-up">
 	<div class="wrapper">
 		<div class="numbers__inner">
 			<div class="numbers__items">

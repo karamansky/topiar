@@ -17,13 +17,13 @@
 	<div class="wrapper">
 		<div class="text-two-cols__inner">
 			<?php if( !empty($title) && $title_type == 'text' ) { ?>
-				<h2 class="text-two-cols__title"><?php echo $title; ?></h2>
+				<h2 class="text-two-cols__title" data-aos="fade-up"><?php echo $title; ?></h2>
 			<?php } ?>
 			<?php if( !empty($title_image) && $title_type == 'image' ) { ?>
-				<div class="text-two-cols__title-image"><?php DisplayGlobal::renderAcfImage( $title_image ) ?></div>
+				<div class="text-two-cols__title-image" data-aos="fade-up"><?php DisplayGlobal::renderAcfImage( $title_image ) ?></div>
 			<?php } ?>
 
-			<div class="text-two-cols__items">
+			<div class="text-two-cols__items" data-aos="fade-up">
 				<?php if( !empty($left_column_text) ) { ?>
 					<div class="text-two-cols__item text-two-cols__left"><?php echo $left_column_text ?></div>
 				<?php } ?>

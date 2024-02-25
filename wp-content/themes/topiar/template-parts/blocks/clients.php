@@ -12,7 +12,7 @@
 
 	if( empty($clients) ) return false;
 ?>
-<section class="clients">
+<section class="clients" data-aos="fade-up">
 	<div class="wrapper">
 		<div class="clients__inner">
 			<div class="clients__left">

@@ -35,7 +35,7 @@
 								$image = get_the_post_thumbnail_url();
 						?>
 
-							<a href="<?php echo $link; ?>" class="blog__item">
+							<a href="<?php echo $link; ?>" class="blog__item" data-aos="fade-up">
 								<div class="blog__content">
 									<div>
 										<?php if( !empty($date) ) { ?>

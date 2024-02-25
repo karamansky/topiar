@@ -1,5 +1,7 @@
 jQuery(document).ready(function( $ ) {
 
+    AOS.init();
+
     //show/hide mob menu
     if( jQuery('.header__hamburger').length ){
         //init custom scrollbar

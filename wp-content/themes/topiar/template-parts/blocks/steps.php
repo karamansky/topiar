@@ -14,9 +14,9 @@
 	<div class="wrapper">
 		<div class="steps__inner">
 			<?php if( !empty($title) ) { ?>
-				<h2 class="section-title steps__title"><?php echo $title; ?></h2>
+				<h2 class="section-title steps__title" data-aos="fade-up"><?php echo $title; ?></h2>
 			<?php } ?>
-			<div class="steps__items">
+			<div class="steps__items" data-aos="fade-up">
 				<?php
 					$bg_step = 100 / count($steps) / 100;
 					$opacity = $bg_step;

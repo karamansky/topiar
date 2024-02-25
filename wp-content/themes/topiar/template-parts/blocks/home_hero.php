@@ -17,7 +17,7 @@
 	<div class="wrapper">
 		<div class="home-hero__inner">
 			<div class="home-hero__content">
-				<div class="home-hero__top">
+				<div class="home-hero__top" data-aos="fade-up">
 					<?php if( !empty($breadcrumbs) ) { ?>
 						<ul class="breadcrumbs">
 							<?php $i = 1; foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -36,7 +36,7 @@
 					<?php } ?>
 				</div>
 				<?php if( !empty($button1) || !empty($button2) ) { ?>
-					<div class="home-hero__buttons">
+					<div class="home-hero__buttons" data-aos="fade-up" data-aos-delay="250">
 						<?php DisplayGlobal::renderAcfLink( $button1, 'btn btn--white home-hero__btn' ) ?>
 						<?php DisplayGlobal::renderAcfLink( $button2, 'btn btn--green home-hero__btn' ) ?>
 					</div>

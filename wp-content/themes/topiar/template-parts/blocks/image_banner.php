@@ -10,7 +10,7 @@
 
 	if( empty($image) ) return false;
 ?>
-<div class="image-banner" <?php echo DisplayGlobal::generateStyleWithBgImageOrNothing( $image ); ?>>
+<div class="image-banner" <?php echo DisplayGlobal::generateStyleWithBgImageOrNothing( $image ); ?> data-aos="fade-up">
 	<div class="wrapper">
 		<div class="image-banner__inner">
 			<?php if( !empty($title) ) { ?>
