@@ -53,6 +53,25 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    //sidebar menu
+    if( jQuery('.uslugi__menu').length ) {
+        //init custom scrollbar
+        const uslugiSidebar = new SimpleBar(jQuery('.uslugi__sidebar')[0], {
+            autoHide: false
+        });
+
+        if( jQuery('.uslugi__menu .menu-item-has-children').length ){
+            if( jQuery(window).width() > 1024 ){
+                jQuery(document).on('click', '.uslugi__menu .menu-item-has-children > a', function(e) {
+                    e.preventDefault();
+                    jQuery(this).parent().toggleClass('tp-open');
+                    jQuery(this).siblings('.sub-menu').stop(true, true).slideToggle();
+                });
+            }
+        }
+    }
+
+
     //show/hide search form in header
     if (jQuery('.header__search a').length){
         jQuery('.header__search a').on('click', (e) => {

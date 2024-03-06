@@ -8,6 +8,19 @@
 	transition: all 0.3s;
 	border-bottom: 1px solid rgba(242, 242, 242, 0.25);
 	z-index: 999;
+
+	& + section,
+	& + div {
+		padding-top: 98px;
+
+		@media ($br_point_laptop) {
+			padding-top: 75px;
+		}
+
+		@media ($br_point_phone) {
+			padding-top: 61px;
+		}
+	}
 }
 
 .header__inner {
