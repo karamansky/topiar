@@ -24,10 +24,10 @@
 			<?php } ?>
 
 			<div class="uslugi__page">
-				<h1 class="uslugi__title" data-aos="fade-up"><?php the_archive_title(); ?></h1>
+				<h1 class="uslugi__title"><?php the_archive_title(); ?></h1>
 
 				<div class="uslugi__block">
-					<div class="uslugi__sidebar" data-aos="fade-up">
+					<div class="uslugi__sidebar">
 						<nav class="uslugi__menu">
 							<ul id="menu-top-menu" class="uslugi-menu">
 								<li id="menu-item-179" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-179"><a href="http://topiar.loc/category_2/proektuvannya/">Проєктування</a>
@@ -91,7 +91,7 @@
 						</nav>
 					</div>
 					<div class="uslugi__content">
-						<div class="filter-bar" data-aos="fade-up">
+						<div class="filter-bar">
 							<div class="filter-bar__views">
 								<a href="#" class="filter-bar__view filter-bar--table">
 									<i class="icon table-view-icon"></i>
@@ -101,6 +101,51 @@
 								</a>
 								<a href="#" class="filter-bar__view filter-bar--list">
 									<i class="icon list-view-icon"></i>
+								</a>
+							</div>
+						</div>
+
+						<div id="tp-view" class="grid-view">
+							<div class="uslugi__items">
+								<a href="#" class="uslugi__item">
+									<div class="uslugi__image">
+										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
+									</div>
+									<div class="uslugi__item-content">
+										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
+										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
+									</div>
+								</a>
+								<a href="#" class="uslugi__item">
+									<div class="uslugi__image">
+										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
+									</div>
+									<div class="uslugi__item-content">
+										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
+										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
+									</div>
+								</a>
+								<a href="#" class="uslugi__item">
+									<div class="uslugi__image">
+										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
+									</div>
+									<div class="uslugi__item-content">
+										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
+										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
+									</div>
+								</a>
+								<a href="#" class="uslugi__item">
+									<div class="uslugi__image">
+										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
+									</div>
+									<div class="uslugi__item-content">
+										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
+										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
+									</div>
 								</a>
 							</div>
 						</div>
