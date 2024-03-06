@@ -37,7 +37,7 @@
 					</div>
 				</div>
 
-				<div id="tp-view" class="grid-view" data-aos="fade-up">
+				<div id="tp-view" class="grid-view">
 					<div class="vendors__items">
 						<a href="#" class="vendors__item">
 							<div class="vendors__item-image">
