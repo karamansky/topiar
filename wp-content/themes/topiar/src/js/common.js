@@ -62,10 +62,10 @@ jQuery(document).ready(function( $ ) {
 
         if( jQuery('.uslugi__menu .menu-item-has-children').length ){
             // if( jQuery(window).width() > 768 ){
-                jQuery(document).on('click', '.uslugi__menu .menu-item-has-children > a', function(e) {
+                jQuery(document).on('click', '.uslugi__menu .menu-item-has-children .menu-item__inner > .menu-item__opener', function(e) {
                     e.preventDefault();
-                    jQuery(this).parent().toggleClass('tp-open');
-                    jQuery(this).siblings('.sub-menu').stop(true, true).slideToggle();
+                    jQuery(this).parent().parent().toggleClass('tp-open');
+                    jQuery(this).parent().siblings('.sub-menu').stop(true, true).slideToggle();
                 });
             // }
         }
