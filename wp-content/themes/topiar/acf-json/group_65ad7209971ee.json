@@ -1,6 +1,6 @@
 {
     "key": "group_65ad7209971ee",
-    "title": "Taxonomy: Services category",
+    "title": "Taxonomy: All Categories",
     "fields": [
         {
             "key": "field_65ad7209a2a1b",
@@ -53,5 +53,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708358097
+    "modified": 1709901635
 }

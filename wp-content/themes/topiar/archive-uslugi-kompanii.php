@@ -58,46 +58,35 @@
 
 						<div id="tp-view" class="grid-view">
 							<div class="uslugi__items">
-								<a href="#" class="uslugi__item">
-									<div class="uslugi__image">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
-									</div>
-									<div class="uslugi__item-content">
-										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
-										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
-									</div>
-								</a>
-								<a href="#" class="uslugi__item">
-									<div class="uslugi__image">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
-									</div>
-									<div class="uslugi__item-content">
-										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
-										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
-									</div>
-								</a>
-								<a href="#" class="uslugi__item">
-									<div class="uslugi__image">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
-									</div>
-									<div class="uslugi__item-content">
-										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
-										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
-									</div>
-								</a>
-								<a href="#" class="uslugi__item">
-									<div class="uslugi__image">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/img/tmp.png" alt="" loading="lazy" />
-									</div>
-									<div class="uslugi__item-content">
-										<h3 class="uslugi__item-title">Сільськогосподарський полив</h3>
-										<div class="uslugi__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, snmnmned do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-										<div class="uslugi__item-more">Детальніше <i class="icon diagonal-arrow-icon"></i></div>
-									</div>
-								</a>
+								<?php
+									$taxonomy = 'catalog_category';
+									$terms = get_terms(
+										array(
+											'taxonomy'   => $taxonomy,
+											'hide_empty' => true,
+											'hierarchical' => false,
+											'orderby' => 'name',
+											'order' => 'ASC',
+										)
+									);
+
+									if ( !empty($terms) ) {
+										foreach ($terms as $item) {
+											$image = get_field('image', 'term_' . $item->term_id);
+											?>
+											<a href="<?php echo get_term_link($item); ?>" class="uslugi__item">
+												<div class="uslugi__image">
+													<img src="<?php echo $image['url']; ?>" alt="<?php echo $item->name; ?>" loading="lazy" />
+												</div>
+												<div class="uslugi__item-content">
+													<h3 class="uslugi__item-title"><?php echo $item->name; ?></h3>
+													<div class="uslugi__item-description"><?php echo $item->description; ?></div>
+													<div class="uslugi__item-more"><?php _e('Детальніше', 'tp'); ?> <i class="icon diagonal-arrow-icon"></i></div>
+												</div>
+											</a>
+										<?php }
+									}
+								?>
 							</div>
 						</div>
 					</div>

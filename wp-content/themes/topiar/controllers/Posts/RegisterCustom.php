@@ -45,7 +45,7 @@ class RegisterCustom {
 			"hierarchical"        => true,
 			"rewrite"             => [ 'slug' => 'uslugi-kompanii/%catalog_category%', 'with_front' => false ],
 			"query_var"           => true,
-			"supports"            => []
+			"supports"            => ['title', 'editor', 'excerpt', 'thumbnail', 'page-attributes']
 		] );
 
 
@@ -71,7 +71,33 @@ class RegisterCustom {
 			"hierarchical"        => true,
 //			"rewrite"             => [ "slug" => 'portfolio' ],
 			"query_var"           => true,
-			"supports"            => []
+			"supports"            => ['title', 'editor', 'excerpt', 'thumbnail', 'page-attributes']
+		] );
+
+
+		//register portfolio type
+		register_post_type( 'vendors', [
+			"label"               => __( 'Виробники', 'tp' ),
+			"labels"              => [
+				"name"          => __( 'Виробники', 'tp' ),
+				"singular_name" => __( 'Виробник', 'tp' ),
+			],
+			"description"         => "",
+			"public"              => true,
+			"publicly_queryable"  => true,
+			"show_ui"             => true,
+			"has_archive"         => true,
+			"show_in_menu"        => true,
+			"show_in_rest"        => true, // To use Gutenberg editor.
+			"show_in_nav_menus"   => true,
+			"menu_icon"           => "dashicons-format-aside",
+			"delete_with_user"    => false,
+			"exclude_from_search" => false,
+			"capability_type"     => "post",
+			"hierarchical"        => true,
+//			"rewrite"             => [ "slug" => 'portfolio' ],
+			"query_var"           => true,
+			"supports"            => ['title', 'editor', 'excerpt', 'thumbnail', 'page-attributes']
 		] );
     }
 }
