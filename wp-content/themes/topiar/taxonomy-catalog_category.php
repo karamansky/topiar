@@ -34,6 +34,8 @@
 									[
 										'theme_location' => 'catalog-menu',
 										'menu_class'     => 'uslugi-menu',
+										'before'          => '<div class="menu-item__inner">',
+										'after'           => '<span class="menu-item__opener"></span></div>',
 									]
 								);
 							?>
