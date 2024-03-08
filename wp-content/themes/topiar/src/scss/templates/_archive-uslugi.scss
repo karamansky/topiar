@@ -69,6 +69,7 @@
 				}
 			}
 
+			&.current-menu-item,
 			&.tp-open {
 				& > .menu-item__inner {
 					background: $green60;
@@ -178,6 +179,7 @@
 							}
 						}
 
+						&.current-menu-item,
 						&.tp-open {
 							& > .menu-item__inner {
 								background: #082213;

@@ -61,6 +61,9 @@ jQuery(document).ready(function( $ ) {
         });
 
         if( jQuery('.uslugi__menu .menu-item-has-children').length ){
+            jQuery('.uslugi__menu .menu-item-has-children.tp-open').children('.sub-menu').stop(true, true).slideDown();
+
+
             // if( jQuery(window).width() > 768 ){
                 jQuery(document).on('click', '.uslugi__menu .menu-item-has-children .menu-item__inner > .menu-item__opener', function(e) {
                     e.preventDefault();

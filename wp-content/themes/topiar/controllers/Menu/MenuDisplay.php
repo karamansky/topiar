@@ -4,6 +4,14 @@ if( !defined( 'ABSPATH' ) ) exit;
 
 class MenuDisplay {
 
+	public function __construct() {
+		$this->initHooks();
+	}
+
+	public function initHooks() {
+		add_filter( 'nav_menu_css_class', [ $this, 'changeMenuClasses' ], 10, 4 );
+	}
+
     public static function getMainMenuItems( $menu = 'main_primary' ) {
         $locations = get_nav_menu_locations();
         if( empty( $locations[ $menu ] ) ) return false;
@@ -47,6 +55,24 @@ class MenuDisplay {
         return $prepared_data;
     }
 
+
+
+	public function changeMenuClasses( $classes, $item, $args, $depth ) {
+		foreach ($classes as $class) {
+			if (
+				$class == 'current-menu-item'
+				|| $class == 'current-menu-parent'
+				|| $class == 'current-menu-ancestor' )
+			{
+				array_push($classes, 'tp-open');
+			}
+		}
+
+		return $classes;
+	}
+
 }
 
 class_alias( 'TOP\Menu\MenuDisplay', 'MenuDisplay' );
+
+new MenuDisplay();
