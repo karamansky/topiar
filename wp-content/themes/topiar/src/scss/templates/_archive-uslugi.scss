@@ -69,7 +69,13 @@
 				}
 			}
 
-			&.current-menu-item,
+			&.current-menu-item {
+				& > .menu-item__inner {
+					background: $green60;
+					border-color: $green60;
+				}
+			}
+
 			&.tp-open {
 				& > .menu-item__inner {
 					background: $green60;
@@ -179,7 +185,13 @@
 							}
 						}
 
-						&.current-menu-item,
+						&.current-menu-item {
+							& > .menu-item__inner {
+								background: #082213;
+								border-color: #082213;
+							}
+						}
+
 						&.tp-open {
 							& > .menu-item__inner {
 								background: #082213;
@@ -251,7 +263,7 @@
 
 	.uslugi__item {
 		display: block;
-		width: calc(100% / 3 - 35px);
+		width: calc(100% / 3 - 44px);
 		margin: 0 22px 24px 22px;
 
 		&:hover {
