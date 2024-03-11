@@ -75,6 +75,14 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.portfolio__category-wrap').length ) {
+        //init custom scrollbar
+        const portfolioSidebar = new SimpleBar(jQuery('.portfolio__category-wrap')[0], {
+            autoHide: false
+        });
+    }
+
+
     //show/hide search form in header
     if (jQuery('.header__search a').length){
         jQuery('.header__search a').on('click', (e) => {

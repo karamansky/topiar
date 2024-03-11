@@ -201,7 +201,7 @@ button {
 	justify-content: center;
 	width: 320px;
 	height: 66px;
-
+	cursor: pointer;
 	border-radius: 6px;
 	border: 1px solid $white;
 	background: $white40;
@@ -232,6 +232,17 @@ button {
 		font-size: 18px;
 		line-height: 1.1;
 	}
+}
+
+.btn--small {
+	height: 42px;
+	padding: 5px 10px;
+	text-align: center;
+	font-family: $font;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 32px;
+	border-radius: 5px;
 }
 
 .btn--white{
@@ -274,6 +285,17 @@ button {
 	&:hover{
 		background: $orange;
 		color: $white;
+	}
+}
+
+.btn--orange-dark{
+	border: 1px solid transparent;
+	color: $black;
+	background: $orange;
+
+	&:hover{
+		background: rgba(239, 125, 0, 0.60);
+		color: $black;
 	}
 }
 
@@ -607,18 +629,11 @@ button {
 		}
 	}
 }
-
-
-
-
 @media ($br_point_phone) {
 	.filter-bar__view:not(:last-of-type) {
 		margin-right: 10px;
 	}
 }
-
-
-
 @media ($br_point_small_phone) {
 	.filter-bar__view:not(:last-of-type) {
 		margin-right: 5px;
@@ -641,3 +656,80 @@ button {
 		}
 	}
 }
+
+
+
+//pagination
+.tp__pagination {
+	.wp-pagenavi {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		color: $white;
+		text-align: center;
+		font-family: $font;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 32px;
+		letter-spacing: -0.48px;
+		margin-left: 25px;
+		margin-right: 25px
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		color: $green;
+		text-align: center;
+		font-family: $font;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 32px;
+		letter-spacing: -0.48px;
+		margin-left: 25px;
+		margin-right: 25px
+	}
+
+	.previouspostslink {
+		font-size: 0;
+		background: url('../img/icons/navigation-arrow-right-icon.svg') center center no-repeat;
+		background-size: 14px 22px;
+		transform: rotate(-180deg);
+	}
+
+	.nextpostslink {
+		font-size: 0;
+		background: url('../img/icons/navigation-arrow-right-icon.svg') center center no-repeat;
+		background-size: 14px 22px;
+	}
+}
+@media ($br_point_phone) {
+	.tp__pagination {
+		span {
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0 10px;
+		}
+
+		a {
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0 10px;
+		}
+	}
+}
+
+
+
+

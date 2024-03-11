@@ -118,61 +118,6 @@
 	}
 }
 
-.blog__pagination {
-	.wp-pagenavi {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	span {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 32px;
-		height: 32px;
-		color: $white;
-		text-align: center;
-		font-family: $font;
-		font-size: 24px;
-		font-weight: 600;
-		line-height: 32px;
-		letter-spacing: -0.48px;
-		margin-left: 25px;
-		margin-right: 25px
-	}
-
-	a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 32px;
-		height: 32px;
-		color: $green;
-		text-align: center;
-		font-family: $font;
-		font-size: 24px;
-		font-weight: 600;
-		line-height: 32px;
-		letter-spacing: -0.48px;
-		margin-left: 25px;
-		margin-right: 25px
-	}
-
-	.previouspostslink {
-		font-size: 0;
-		background: url('../img/icons/navigation-arrow-right-icon.svg') center center no-repeat;
-		background-size: 14px 22px;
-		transform: rotate(-180deg);
-	}
-
-	.nextpostslink {
-		font-size: 0;
-		background: url('../img/icons/navigation-arrow-right-icon.svg') center center no-repeat;
-		background-size: 14px 22px;
-	}
-}
-
 
 
 
@@ -247,19 +192,5 @@
 
 	.blog__image {
 		width: 100%;
-	}
-
-	.blog__pagination {
-		span {
-			font-size: 18px;
-			line-height: 24px;
-			margin: 0 10px;
-		}
-
-		a {
-			font-size: 18px;
-			line-height: 24px;
-			margin: 0 10px;
-		}
 	}
 }

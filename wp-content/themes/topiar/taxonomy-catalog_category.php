@@ -1,5 +1,5 @@
 <?php
-	//uslugi-kompanii archive template
+	//uslugi-kompanii taxonomy template
 
 	get_header();
 
@@ -62,11 +62,6 @@
 									$taxonomy = 'catalog_category';
 									$current_term = get_queried_object()->term_id;
 									$child_taxonomies = get_term_children($current_term, $taxonomy);
-
-//									echo "<pre>";
-//									print_r($current_term);
-//									print_r($child_taxonomies);
-//									echo "</pre>";
 
 									if( !empty($child_taxonomies) ) {
 										//get all child taxonomies by this term
