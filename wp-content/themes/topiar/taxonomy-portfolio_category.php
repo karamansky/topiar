@@ -129,29 +129,7 @@
 				</div>
 				<div class="archive-form__right">
 					<div class="archive-form__form">
-						<div class="input-row">
-							<div class="input-wrap">
-								<label for="msg">Поділіться з нами:</label>
-								<textarea id="msg" placeholder="Опишіть своє питання"></textarea>
-							</div>
-						</div>
-						<div class="input-row input-row--3col">
-							<label>Ваші контакти:</label>
-							<div class="input-wrap">
-								<input type="text" placeholder="Ваше імʼя">
-							</div>
-							<div class="input-wrap">
-								<input type="email" placeholder="Email">
-							</div>
-							<div class="input-wrap">
-								<input type="tel" placeholder="Номер телефону">
-							</div>
-						</div>
-						<div class="input-row">
-							<div class="input-wrap">
-								<input type="submit" value="Надіслати" class="btn btn--small btn--orange-dark">
-							</div>
-						</div>
+						<?php echo do_shortcode($form['shortcode']); ?>
 					</div>
 				</div>
 			</div>
