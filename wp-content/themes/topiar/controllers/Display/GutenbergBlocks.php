@@ -86,6 +86,22 @@ class GutenbergBlocks {
 				]
 			],
 			[
+				'name'        => 'portfolio_hero',
+				'title'       => 'Portfolio Hero block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'admin-home' ],
+				'keywords'    => [ 'hero', 'page', 'portfolio', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'portfolio-hero-block.png',
+						]
+					]
+				]
+			],
+			[
 				'name'        => 'image_right',
 				'title'       => 'Image right block',
 				'category'    => 'top-blocks',

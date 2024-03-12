@@ -351,6 +351,7 @@ button {
 	.breadcrumbs {
 		padding-top: 15px;
 		margin-bottom: 40px;
+		overflow-x: auto;
 
 		.breadcrumbs__item {
 			font-size: 12px;
@@ -360,11 +361,13 @@ button {
 		a {
 			font-size: 12px;
 			line-height: 18px;
+			white-space: nowrap;
 		}
 
 		span {
 			font-size: 12px;
 			line-height: 18px;
+			white-space: nowrap;
 		}
 	}
 }
