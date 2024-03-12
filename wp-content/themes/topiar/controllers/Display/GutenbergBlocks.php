@@ -357,6 +357,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'tasks',
+				'title'       => 'Tasks block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'editor-ol' ],
+				'keywords'    => [ 'tasks', 'zadachi', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'tasks-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
