@@ -373,6 +373,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'deadlines',
+				'title'       => 'Deadlines block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'media-document' ],
+				'keywords'    => [ 'deadlines', 'termin', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'deadlines-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

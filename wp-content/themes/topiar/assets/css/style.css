@@ -755,6 +755,13 @@ button {
   background-image: url("../img/icons/boss-icon.svg");
 }
 
+.ok-white-icon {
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-image: url("../img/icons/ok-white-icon.svg");
+}
+
 .header {
   background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(2px);
@@ -3512,6 +3519,134 @@ button {
   object-fit: cover;
 }
 
+.deadlines {
+  padding: 80px 0;
+  background: #0a0a0a;
+}
+
+.deadlines__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.deadlines__title {
+  width: calc(100% - 850px);
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding-right: 30px;
+}
+
+.deadlines__text {
+  width: 850px;
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.deadlines__text p {
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.deadlines__text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.deadlines__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.deadlines__items {
+  width: calc(100% - 850px);
+  padding-right: 30px;
+}
+
+.deadlines__item {
+  padding-top: 20px;
+  border-top: 2px solid #008237;
+  padding-bottom: 28px;
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.deadlines__item-inner {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.deadlines__item-inner .icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.deadlines__image {
+  width: 850px;
+}
+
+.deadlines__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.deadlines__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.deadlines__bottom-text {
+  width: 850px;
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.deadlines__bottom-text p {
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.deadlines__bottom-text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .popup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5499,6 +5634,26 @@ button {
     width: 65%;
   }
 
+  .deadlines__title {
+    width: 35%;
+  }
+
+  .deadlines__text {
+    width: 65%;
+  }
+
+  .deadlines__items {
+    width: 35%;
+  }
+
+  .deadlines__image {
+    width: 65%;
+  }
+
+  .deadlines__bottom-text {
+    width: 65%;
+  }
+
   .portfolio__item-title {
     font-size: 22px;
   }
@@ -5936,6 +6091,18 @@ button {
 
   .tasks__image {
     height: 300px;
+  }
+
+  .deadlines__item {
+    font-size: 16px;
+  }
+
+  .deadlines__item-inner {
+    padding: 0;
+  }
+
+  .deadlines__bottom-text {
+    width: 100%;
   }
 
   .popup__inner {
@@ -6816,6 +6983,47 @@ button {
 
   .tasks__image:last-child {
     display: none;
+  }
+
+  .deadlines {
+    padding: 56px 0;
+  }
+
+  .deadlines__top {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .deadlines__title {
+    width: 100%;
+    font-weight: 600;
+    text-transform: none;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .deadlines__text {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .deadlines__center {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .deadlines__items {
+    width: 100%;
+  }
+
+  .deadlines__image {
+    width: calc(100% + 40px);
+    height: 280px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
   .popup__inner {
