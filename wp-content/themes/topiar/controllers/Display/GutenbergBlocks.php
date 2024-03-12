@@ -341,6 +341,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'text_with_image',
+				'title'       => 'Text with image block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'cover-image' ],
+				'keywords'    => [ 'text', 'image', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'text-with-image-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
