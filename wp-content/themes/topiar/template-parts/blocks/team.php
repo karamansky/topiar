@@ -22,6 +22,23 @@
 						<?php if( !empty($item['photo']) ) { ?>
 							<div class="team__item-image">
 								<?php DisplayGlobal::renderAcfImage($item['photo']); ?>
+
+								<?php if( !empty($item['hover']['text']) ) { ?>
+									<div class="team__item-overlay">
+										<?php if( !empty($item['hover']['title']) ) { ?>
+											<h3 class="team__hover-title"><?php echo $item['hover']['title']; ?></h3>
+										<?php } ?>
+
+										<div class="team__hover-info">
+											<?php if( !empty($item['hover']['text_title']) ) { ?>
+												<h4 class="team__hover-text-title"><?php echo $item['hover']['text_title']; ?></h4>
+											<?php } ?>
+											<?php if( !empty($item['hover']['text']) ) { ?>
+												<div class="team__hover-text"><?php echo $item['hover']['text']; ?></div>
+											<?php } ?>
+										</div>
+									</div>
+								<?php } ?>
 							</div>
 						<?php } ?>
 						<div class="team__item-footer">
