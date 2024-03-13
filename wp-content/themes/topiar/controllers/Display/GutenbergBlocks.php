@@ -440,6 +440,23 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'youtube',
+				'title'       => 'Youtube block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'video-alt3' ],
+				'keywords'    => [ 'youtube', 'video', 'block' ],
+				'enqueue_script' => get_template_directory_uri() . '/assets/js/youtube.js',
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'youtube-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
