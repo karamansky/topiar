@@ -3886,6 +3886,146 @@ button {
   object-fit: cover;
 }
 
+.chess-text {
+  background: #f8f8f8;
+  color: #0a0a0a;
+  padding: 80px 0;
+}
+
+.chess-text__block {
+  overflow: hidden;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+}
+
+.chess-text__block:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.chess-text__block:nth-child(2n) .chess-text__image {
+  float: right;
+  margin-right: 0;
+  margin-left: 50px;
+}
+
+.chess-text__block h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.chess-text__block h2:not(:last-child) {
+  margin-bottom: 44px;
+}
+
+.chess-text__block h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.chess-text__block h3:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.chess-text__block h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.chess-text__block h4:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.chess-text__block h5 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.chess-text__block h5:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.chess-text__block h6 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.chess-text__block h6:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.chess-text__block p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.chess-text__block p:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.chess-text__block a {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #008237;
+  text-decoration: underline;
+}
+
+.chess-text__block a:hover {
+  text-decoration: none;
+}
+
+.chess-text__block ul {
+  padding: 0;
+  margin: 18px 0 18px 18px;
+}
+
+.chess-text__block ul:last-child {
+  margin-bottom: 0;
+}
+
+.chess-text__block ul li {
+  font-size: 18px;
+  font-weight: 500;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+.chess-text__block ol {
+  padding: 0;
+  margin: 18px 0 18px 18px;
+}
+
+.chess-text__block ol:last-child {
+  margin-bottom: 0;
+}
+
+.chess-text__block ol li {
+  font-size: 18px;
+  font-weight: 500;
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+.chess-text__block b,
+.chess-text__block strong {
+  font-weight: 700;
+}
+
+.chess-text__image {
+  width: 560px;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.chess-text__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .popup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5909,6 +6049,15 @@ button {
     width: 180px;
   }
 
+  .chess-text__image {
+    width: 380px;
+    margin-right: 40px;
+  }
+
+  .chess-text__block:nth-child(2n) .chess-text__image {
+    margin-left: 40px;
+  }
+
   .portfolio__item-title {
     font-size: 22px;
   }
@@ -7426,6 +7575,93 @@ button {
 
   .gallery__slider-item {
     height: 140px;
+  }
+
+  .chess-text {
+    padding: 56px 0;
+  }
+
+  .chess-text__image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .chess-text__block {
+    margin-bottom: 0;
+  }
+
+  .chess-text__block:not(:last-child) {
+    margin-bottom: 36px;
+  }
+
+  .chess-text__block:nth-child(2n) .chess-text__image {
+    margin-left: 20px;
+  }
+
+  .chess-text__block h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .chess-text__block h2:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .chess-text__block h3 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .chess-text__block h3:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .chess-text__block h4 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .chess-text__block h4:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .chess-text__block h5 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .chess-text__block h5:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .chess-text__block h6 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .chess-text__block p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .chess-text__block p:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  .chess-text__block a {
+    font-size: 14px;
+  }
+
+  .chess-text__block ul li {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .chess-text__block ol li {
+    font-size: 14px;
+    font-weight: 400;
   }
 
   .popup__inner {

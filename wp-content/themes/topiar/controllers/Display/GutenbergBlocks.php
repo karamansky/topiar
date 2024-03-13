@@ -424,6 +424,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'chess_text',
+				'title'       => 'Chess text block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'media-document' ],
+				'keywords'    => [ 'chess', 'text', 'images', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'chess-text-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
