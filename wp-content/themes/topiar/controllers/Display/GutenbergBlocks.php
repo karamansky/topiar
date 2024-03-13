@@ -389,6 +389,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'works',
+				'title'       => 'Works block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'media-document' ],
+				'keywords'    => [ 'works', 'services', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'works-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

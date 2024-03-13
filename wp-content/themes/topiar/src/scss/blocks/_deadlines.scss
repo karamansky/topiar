@@ -184,12 +184,14 @@
 	}
 
 	.deadlines__center {
+		flex-direction: column-reverse;
 		flex-wrap: wrap;
 		margin-bottom: 36px;
 	}
 
 	.deadlines__items {
 		width: 100%;
+		padding-right: 0;
 	}
 
 	.deadlines__image {
@@ -197,5 +199,6 @@
 		height: 280px;
 		margin-left: -20px;
 		margin-right: -20px;
+		margin-bottom: 36px;
 	}
 }
