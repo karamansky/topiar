@@ -61,6 +61,8 @@ class GutenbergBlocks {
 					'category'        => !empty( $block['category'] ) ? $block['category'] : '',
 					'icon'            => !empty( $block['icon'] ) ? $block['icon'] : [ 'background' => '#008237', 'src' => 'desktop' ],
 					'keywords'        => !empty( $block['keywords'] ) ? $block['keywords'] : [],
+					'enqueue_style'   => !empty( $block['enqueue_style'] ) ? $block['enqueue_style'] : [],
+					'enqueue_script'  => !empty( $block['enqueue_script'] ) ? $block['enqueue_script'] : [],
 					'example'         => !empty( $block['example'] ) ? $block['example'] : [],
 				]
 			);
@@ -401,6 +403,23 @@ class GutenbergBlocks {
 						'mode' => 'preview',
 						'data' => [
 							'image' => 'works-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'gallery',
+				'title'       => 'Gallery block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'images-alt' ],
+				'keywords'    => [ 'gallery', 'portfolio', 'images', 'photo', 'block' ],
+				'enqueue_script' => get_template_directory_uri() . '/assets/libs/fslightbox/fslightbox.js',
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'gallery-block.png',
 						]
 					]
 				]

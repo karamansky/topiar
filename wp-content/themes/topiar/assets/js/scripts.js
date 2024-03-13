@@ -83,6 +83,28 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.gallery__slider').length ) {
+        jQuery('.gallery__slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            arrows: true,
+            dots: false,
+            centerPadding: '14px',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+
     //show/hide search form in header
     if (jQuery('.header__search a').length){
         jQuery('.header__search a').on('click', (e) => {
