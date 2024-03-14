@@ -83,6 +83,21 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.blog-home__category-wrap').length ) {
+        //init custom scrollbar
+        let $menuWrap = jQuery('.blog-home__category-wrap');
+        const blogSidebar = new SimpleBar($menuWrap[0], {
+            autoHide: false
+        });
+
+        jQuery(document).on('click', '.blog-home__category-menu-mob', function(e){
+            e.preventDefault();
+
+            $menuWrap.slideToggle();
+        })
+    }
+
+
     if( jQuery('.gallery__slider').length ) {
         jQuery('.gallery__slider').slick({
             slidesToShow: 3,
@@ -194,7 +209,6 @@ jQuery(document).ready(function( $ ) {
             link.text( textClose );
         })
     }
-
 
 
     if( jQuery('.faq__item').length ) {

@@ -41,7 +41,7 @@
 						</div>
 
 						<div class="portfolio__items">
-							<a href="#" class="portfolio__item"></a>
+							<a href="#" class="portfolio__item" onclick="return false;"></a>
 							<?php
 								while( have_posts() ) { the_post();
 

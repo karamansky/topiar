@@ -101,6 +101,11 @@ class DisplayBreadcrumbs {
 				'url'   => '',
 				'title' => get_the_title()
 			];
+		} elseif ( is_home() ) {  //blog
+			$subtitle_items[] = [
+				'url'   => '',
+				'title' => __('Блог', 'tp')
+			];
 		} elseif ( is_category() ) {
 			$category = get_category(get_query_var('cat'));
 
