@@ -98,6 +98,26 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.blog-single__content').length ) {
+        let i = 1;
+        jQuery('.blog-single__content h2').each(function(el){
+            let text = jQuery(this).text();
+            let id = 'heading' + i;
+            let link = '<li><a href="#'+ id + '">' + text + '</a></li>';
+            jQuery(this).attr('id', id);
+            jQuery('.blog-single__list-items').append(link);
+            i++;
+        });
+
+        jQuery(".blog-single__list-items").on('click','a', function (e) {
+            e.preventDefault();
+            let id  = $(this).attr('href'),
+                top = $(id).offset().top - 100;
+            jQuery('body,html').animate({scrollTop: top}, 600);
+        });
+    }
+
+
     if( jQuery('.gallery__slider').length ) {
         jQuery('.gallery__slider').slick({
             slidesToShow: 3,

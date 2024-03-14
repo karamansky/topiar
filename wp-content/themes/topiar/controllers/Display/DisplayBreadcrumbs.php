@@ -26,7 +26,25 @@ class DisplayBreadcrumbs {
 				if( !empty($post_type) ) {
 					$post_type_archive = get_post_type_archive_link($post_type->name);
 
-					if( !empty($post_type_archive) ){
+					if( !empty($post_type_archive) && get_post_type() == 'post' ){
+						$subtitle_items[] = [
+							'url' => $post_type_archive,
+							'title' => __('Блог', 'tp')
+						];
+
+						$terms = get_the_terms(get_the_ID(), 'category');
+
+						foreach ( $terms as $item ) {
+							if ( $item->parent == 0 ) {
+								$subtitle_items[] = [
+									'url' => get_term_link($item->term_id),
+									'title' => $item->name
+								];
+
+								break;
+							}
+						}
+					} else if( !empty($post_type_archive) ){
 						$subtitle_items[] = [
 							'url' => $post_type_archive,
 							'title' => $post_type->labels->name
@@ -50,7 +68,6 @@ class DisplayBreadcrumbs {
 								'title' => $item->name
 							];
 						}
-
 					}
 
 					if( get_post_type() == 'portfolio' ) {
@@ -108,6 +125,14 @@ class DisplayBreadcrumbs {
 			];
 		} elseif ( is_category() ) {
 			$category = get_category(get_query_var('cat'));
+			$post_type_archive = get_post_type_archive_link('post');
+
+			if( !empty($post_type_archive) ) {
+				$subtitle_items[] = [
+					'url' => $post_type_archive,
+					'title' => __('Блог', 'tp')
+				];
+			}
 
 			if ($category->parent != 0) {
 				$parent_category = get_category($category->parent);

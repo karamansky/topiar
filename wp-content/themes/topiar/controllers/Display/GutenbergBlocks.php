@@ -457,6 +457,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'blog_single',
+				'title'       => 'Blog single block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'media-spreadsheet' ],
+				'keywords'    => [ 'blog', 'single', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'blog-single-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
