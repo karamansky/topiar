@@ -37,7 +37,7 @@
 						<div class="blog-home__category-menu-mob"><?php echo $menu_item ?><i class="icon arrow-down-gray-icon"></i></div>
 						<div class="blog-home__category-wrap">
 							<ul class="blog-home__category-menu">
-								<li class="menu-item"><a href="#"><?php _e('Всі' , 'tp'); ?></a></li>
+								<li class="menu-item"><a href="<?php echo get_post_type_archive_link('post') ?>"><?php _e('Всі' , 'tp'); ?></a></li>
 								<?php if( !empty($terms) && !is_wp_error($terms) ) { ?>
 									<?php
 									foreach ($terms as $item) {
