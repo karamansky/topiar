@@ -68,6 +68,12 @@
 									</g>
 								</svg>
 							</button>
+							<a href="#" class="header__search-close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+									<line x1="1.35355" y1="0.946007" x2="7.94975" y2="7.5422" stroke="#B4B1B1"/>
+									<line x1="1.15426" y1="7.5422" x2="7.75046" y2="0.946002" stroke="#B4B1B1"/>
+								</svg>
+							</a>
 						</form>
 					</div>
 					<div class="header__cart">

@@ -1,7 +1,5 @@
 jQuery(document).ready(function( $ ) {
 
-    console.log(getCookie('tp-view'));
-
     AOS.init();
 
     //show/hide mob menu
@@ -144,22 +142,29 @@ jQuery(document).ready(function( $ ) {
 
     //show/hide search form in header
     if (jQuery('.header__search a').length){
-        jQuery('.header__search a').on('click', (e) => {
+        jQuery('.header__search a').on('click', function(e) {
             e.preventDefault();
             jQuery(this).parent().toggleClass('tp-open');
         });
-        jQuery(document).mouseup( (e) => {
+        jQuery(document).mouseup( function(e) {
             var div = jQuery(".header__search");
             if (!div.is(e.target)
                 && div.has(e.target).length === 0) {
                 div.removeClass('tp-open');
+                div.find('input').val('');
             }
         });
+
+        jQuery('.header__search-close').on('click', function(e){
+            e.preventDefault();
+            jQuery(".header__search").removeClass('tp-open');
+            jQuery(".header__search").find('input').val('');
+        })
     }
 
 
     if( jQuery('.scrolling-text__footer').length ) {
-      jQuery(document).on('click', '.scrolling-text__footer', (e) => {
+      jQuery(document).on('click', '.scrolling-text__footer', function(e) {
           e.preventDefault();
 
           if(jQuery(".scrolling-text__content").hasClass("tp-open")) {
