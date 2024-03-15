@@ -42,21 +42,16 @@
 						</nav>
 					</div>
 					<div class="uslugi__content">
-						<div class="filter-bar">
-							<div class="filter-bar__views">
-								<a href="#" class="filter-bar__view filter-bar--table">
-									<i class="icon table-view-icon"></i>
-								</a>
-								<a href="#" class="filter-bar__view filter-bar--grid tp-active">
-									<i class="icon grid-view-icon"></i>
-								</a>
-								<a href="#" class="filter-bar__view filter-bar--list">
-									<i class="icon list-view-icon"></i>
-								</a>
-							</div>
-						</div>
+						<?php echo get_template_part('template-parts/partials/filter-bar'); ?>
 
-						<div id="tp-view" class="grid-view">
+						<?php
+							if( !empty($_COOKIE['tp-view']) ) {
+								$view_class = $_COOKIE['tp-view'] . '-view';
+							} else {
+								$view_class = 'grid-view';
+							}
+						?>
+						<div id="tp-view" class="<?php echo $view_class; ?>">
 							<div class="uslugi__items">
 								<?php
 									$taxonomy = 'catalog_category';

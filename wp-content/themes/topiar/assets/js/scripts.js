@@ -1,5 +1,7 @@
 jQuery(document).ready(function( $ ) {
 
+    console.log(getCookie('tp-view'));
+
     AOS.init();
 
     //show/hide mob menu
@@ -288,20 +290,16 @@ jQuery(document).ready(function( $ ) {
 
             if( jQuery(this).hasClass('filter-bar--table') ) {
                 jQuery(this).parents('.wrapper').find('#tp-view').attr('class', 'table-view');
+                setCookie('tp-view', 'table', {secure: true, 'max-age': 3600});
             } else if( jQuery(this).hasClass('filter-bar--grid') ) {
                 jQuery(this).parents('.wrapper').find('#tp-view').attr('class', 'grid-view');
+                setCookie('tp-view', 'grid', {secure: true, 'max-age': 3600});
             } else if( jQuery(this).hasClass('filter-bar--list') ) {
                 jQuery(this).parents('.wrapper').find('#tp-view').attr('class', 'list-view');
+                setCookie('tp-view', 'list', {secure: true, 'max-age': 3600});
             }
         })
     }
-
-
-
-
-
-
-
 
 
     //faq
@@ -351,6 +349,45 @@ jQuery(document).ready(function( $ ) {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 });
+
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+
+function setCookie(name, value, options = {}) {
+
+    options = {
+        path: '/',
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+    }
+
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
+}
+
+
+function deleteCookie(name) {
+    setCookie(name, "", {
+        'max-age': -1
+    })
+}
 jQuery(document).ready(function( $ ) {
 
 	function getParameterByName(name, url = window.location.href) {
