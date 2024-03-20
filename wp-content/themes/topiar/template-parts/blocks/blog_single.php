@@ -17,7 +17,7 @@
 	<div class="wrapper">
 		<div class="blog-single__inner">
 
-			<?php echo get_template_part('template-parts/partials/breadcrumbs'); ?>
+			<?php get_template_part('template-parts/partials/breadcrumbs'); ?>
 
 			<div class="blog-single__main">
 				<?php if( !empty($title) ) { ?>

@@ -141,7 +141,7 @@ jQuery(document).ready(function( $ ) {
 
 
     //show/hide search form in header
-    if (jQuery('.header__search a').length){
+    if ( jQuery('.header__search a').length){
         jQuery('.header__search a').on('click', function(e) {
             e.preventDefault();
             jQuery(this).parent().toggleClass('tp-open');
@@ -160,6 +160,56 @@ jQuery(document).ready(function( $ ) {
             jQuery(".header__search").removeClass('tp-open');
             jQuery(".header__search").find('input').val('');
         })
+    }
+
+
+    if( jQuery('.search-result__more').length ) {
+        if( jQuery(window).width() < 1024 ) {
+            jQuery('.search-result__more .see').text('2');
+        }
+
+
+        jQuery(document).on('click', '.search-result__more', function(e){
+            e.preventDefault();
+
+            let $this = jQuery(this);
+            let count = jQuery(this).attr('data-count');
+
+            $this.parent().find('.search-result__items').css('max-height', '100%');
+            $this.find('.see').text(count);
+        })
+    }
+
+
+    if( jQuery('.search-result__type-filter-item').length ) {
+        jQuery(document).on('click', '.search-result__type-filter-item', function(e){
+            e.preventDefault();
+
+            let target = jQuery(this).attr('href');
+            let text = jQuery(this).html();
+
+            if( target !== '#' ) {
+                jQuery('.search-result__type-box').hide();
+                jQuery(target).show();
+            } else {
+                jQuery('.search-result__type-box').show();
+            }
+
+            jQuery('.search-result__type-filter-main-item').html(text);
+            jQuery('.search-result__type-filter-item').removeClass('tp-active');
+            jQuery(this).addClass('tp-active');
+
+            if (jQuery(window).width() < 768) {
+                jQuery('.search-result__type-filter-drop').slideUp();
+            }
+        });
+
+
+        jQuery(document).on('click', '.search-result__type-filter-main-item', function(e){
+           e.preventDefault();
+
+           jQuery('.search-result__type-filter-drop').slideToggle();
+        });
     }
 
 

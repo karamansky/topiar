@@ -54,19 +54,41 @@ class DisplayBreadcrumbs {
 					if( get_post_type() == 'uslugi-kompanii' ) {
 						$terms = get_the_terms(get_the_ID(), 'catalog_category');
 
-						foreach ( $terms as $item ) {
-							if ( $item->parent != 0 ) {
-								$term_parent = get_term( $item->parent );
-								$subtitle_items[] = [
-									'url' => get_term_link($item->parent),
-									'title' => $term_parent->name
-								];
-							}
+						if ( class_exists('WPSEO_Primary_Term') ) {
+							$wpseo_primary_term = new \WPSEO_Primary_Term( 'catalog_category', get_the_id() );
+							$wpseo_primary_term = $wpseo_primary_term->get_primary_term();
+							$primary_term               = get_term( $wpseo_primary_term );
 
-							$subtitle_items[] = [
-								'url' => get_term_link($item->term_id),
-								'title' => $item->name
-							];
+							if ( !is_wp_error($primary_term) ) {
+								if ( $primary_term->parent != 0 ) {
+									$term_parent = get_term( $primary_term->parent );
+
+									$subtitle_items[] = [
+										'url' => get_term_link($primary_term->parent),
+										'title' => $term_parent->name
+									];
+								}
+
+								$subtitle_items[] = [
+									'url' => get_term_link($primary_term->term_id),
+									'title' => $primary_term->name
+								];
+							} else {
+								foreach ( $terms as $item ) {
+									if ( $item->parent != 0 ) {
+										$term_parent = get_term( $item->parent );
+										$subtitle_items[] = [
+											'url' => get_term_link($item->parent),
+											'title' => $term_parent->name
+										];
+									}
+
+									$subtitle_items[] = [
+										'url' => get_term_link($item->term_id),
+										'title' => $item->name
+									];
+								}
+							}
 						}
 					}
 

@@ -11,6 +11,7 @@ class Settings {
     public function initHooks() {
         add_action( 'acf/init', [ $this, 'addOptionsPages' ] );
         add_action( 'after_setup_theme', [ $this, 'topSetup' ] );
+		add_action( 'pre_get_posts', [$this, 'removePagesFromSearch'] );
     }
 
     public function topSetup() {
@@ -57,6 +58,7 @@ class Settings {
             ]
         );
     }
+
 
     public function addOptionsPages() {
         if( !function_exists( 'acf_add_options_page' ) ) return;
@@ -116,6 +118,19 @@ class Settings {
         );
     }
 
+
+	function removePagesFromSearch( $query ) {
+		if ( !is_admin() && $query->is_main_query() ) {
+			if ($query->is_search) {
+				$query->set('post__not_in',
+					[
+						2, //sample page
+						7, //home page
+					]
+				);
+			}
+		}
+	}
 }
 
 new Settings();

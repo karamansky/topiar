@@ -8,8 +8,8 @@
 <section class="portfolio">
 	<div class="wrapper">
 		<div class="portfolio__inner">
-			
-			<?php echo get_template_part('template-parts/partials/breadcrumbs'); ?>
+
+			<?php get_template_part('template-parts/partials/breadcrumbs'); ?>
 
 			<div class="portfolio__content">
 				<h1 class="portfolio__title"><?php the_archive_title(); ?></h1>
@@ -54,7 +54,7 @@
 
 <?php
 	$args = [ 'text' => $text ];
-	echo get_template_part('template-parts/partials/scrolling-text', null, $args);
+	get_template_part('template-parts/partials/scrolling-text', null, $args);
 
 
 	get_footer();

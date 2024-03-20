@@ -1,5 +1,3 @@
-<?php
-?>
-
-
-<h2>No Results</h2>
+<div class="search-none-results">
+	<h2><?php _e('Упс... За вашим запитом нічого не знайдено :(', 'tp'); ?></h2>
+</div>

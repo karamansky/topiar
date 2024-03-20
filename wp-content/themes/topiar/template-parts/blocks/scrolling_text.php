@@ -10,5 +10,5 @@
 	if( empty($text) ) return false;
 
 	$args = [ 'text' => $text ];
-	echo get_template_part('template-parts/partials/scrolling-text', null, $args);
+	get_template_part('template-parts/partials/scrolling-text', null, $args);
 ?>

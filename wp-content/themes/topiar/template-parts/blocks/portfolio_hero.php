@@ -18,7 +18,7 @@
 	<div class="wrapper">
 		<div class="portfolio-hero__inner">
 			<div class="portfolio-hero__breadcrumbs">
-				<?php echo get_template_part('template-parts/partials/breadcrumbs'); ?>
+				<?php get_template_part('template-parts/partials/breadcrumbs'); ?>
 			</div>
 
 			<div class="portfolio-hero__content">

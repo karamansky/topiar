@@ -10,7 +10,7 @@
 		<div class="wrapper">
 			<div class="vendors__inner">
 
-				<?php echo get_template_part('template-parts/partials/breadcrumbs'); ?>
+				<?php get_template_part('template-parts/partials/breadcrumbs'); ?>
 
 				<h1 class="page-title vendors__title" data-aos="fade-up"><?php the_title(); ?></h1>
 

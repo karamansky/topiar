@@ -58,7 +58,7 @@
 				<div class="header__actions">
 					<div class="header__search">
 						<a href="#" class=""><i class="icon search-icon"></i></a>
-						<form action="">
+						<form action="/">
 							<input type="text" name="s">
 							<button type="submit">
 								<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

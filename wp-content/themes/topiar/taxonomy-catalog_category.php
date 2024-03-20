@@ -42,7 +42,7 @@
 						</nav>
 					</div>
 					<div class="uslugi__content">
-						<?php echo get_template_part('template-parts/partials/filter-bar'); ?>
+						<?php get_template_part('template-parts/partials/filter-bar'); ?>
 
 						<?php
 							if( !empty($_COOKIE['tp-view']) ) {
@@ -131,7 +131,7 @@
 
 <?php
 	$args = [ 'text' => $text ];
-	echo get_template_part('template-parts/partials/scrolling-text', null, $args);
+	get_template_part('template-parts/partials/scrolling-text', null, $args);
 
 
 	get_footer();

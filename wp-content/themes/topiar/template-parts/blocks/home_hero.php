@@ -18,7 +18,7 @@
 			<div class="home-hero__content">
 				<div class="home-hero__top" data-aos="fade-up">
 
-					<?php echo get_template_part('template-parts/partials/breadcrumbs'); ?>
+					<?php get_template_part('template-parts/partials/breadcrumbs'); ?>
 
 					<?php if( !empty($title) ) { ?>
 						<h1 class="home-hero__title"><?php echo $title ?></h1>
