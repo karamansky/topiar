@@ -81,10 +81,6 @@
 	margin-top: 105px;
 }
 
-.blog-single__list {
-
-}
-
 .blog-single__list-title {
 	color: $black;
 	font-family: $font;
@@ -356,6 +352,7 @@
 	}
 
 	.blog-single__content {
+		overflow: visible;
 		margin-top: 56px;
 
 		h2 {
@@ -422,9 +419,11 @@
 		}
 
 		figure {
-			width: 100%;
-			max-width: 100%;
-			min-width: 100%;
+			width: calc(100% + 40px);
+			max-width: calc(100% + 40px);
+			min-width: calc(100% + 40px);
+			margin-left: -20px;
+			margin-right: -20px;
 
 			img {
 				width: 100%;

@@ -22,7 +22,7 @@
 					$title = get_the_title($item->ID);
 					$excerpt = get_the_excerpt($item->ID);
 					$date = get_the_date('d.m.Y', $item->ID); ?>
-					<div class="blog-posts__item">
+					<a href="<?php echo get_the_permalink($item->ID); ?>" class="blog-posts__item">
 						<?php if( !empty(get_the_post_thumbnail_url($item->ID)) ) { ?>
 							<div class="blog-posts__image">
 								<img src="<?php echo get_the_post_thumbnail_url($item->ID); ?>" alt="post image" loading="lazy" />
@@ -45,7 +45,7 @@
 								</div>
 							<?php } ?>
 						</div>
-					</div>
+					</a>
 				<?php } ?>
 			</div>
 		</div>
