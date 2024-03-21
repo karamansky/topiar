@@ -5265,7 +5265,7 @@ button {
 }
 
 .why-us__advantages-block {
-  width: calc(50% - 30px);
+  width: calc(50% - 15px);
   border-radius: 12px;
   border: 1px solid #484848;
   padding: 30px;
@@ -8300,7 +8300,6 @@ button {
   }
 
   .why-us__advantages-block {
-    width: calc(50% - 15px);
     padding: 20px;
   }
 
