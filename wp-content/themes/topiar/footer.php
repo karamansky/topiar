@@ -82,6 +82,11 @@
 					<?php if( !empty($footer_button) ) { DisplayGlobal::renderAcfLink( $footer_button, 'btn btn--green footer__button' ); } ?>
 				</div>
 			</div>
+			<a href="#" class="to-top-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+					<path d="M1.18323 14.6582L14.0858 1.75598C14.8668 0.974944 16.1332 0.974951 16.9142 1.75599L29.8164 14.6582" stroke="#23202F" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+			</a>
 		</div>
 	</div>
 </footer>

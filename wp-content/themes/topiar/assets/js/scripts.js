@@ -226,6 +226,14 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.to-top-btn').length ) {
+        jQuery(document).on('click','.to-top-btn', function (e) {
+            e.preventDefault();
+            jQuery('body,html').animate({scrollTop: 0}, 600);
+        });
+    }
+
+
     if( jQuery('.d-head__content-more').length ) {
       jQuery(document).on('click', '.d-head__content-more', function(e) {
           e.preventDefault();

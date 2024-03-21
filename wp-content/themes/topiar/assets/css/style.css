@@ -293,6 +293,49 @@ button {
   color: #0a0a0a;
 }
 
+.to-top-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #EF7D00;
+  -webkit-transition: al 0.3s;
+  -o-transition: al 0.3s;
+  transition: al 0.3s;
+  position: absolute;
+  right: 0;
+  top: -40px;
+}
+
+.to-top-btn:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #fff;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.to-top-btn:hover:before {
+  opacity: 1;
+}
+
 .bg-texture,
 .texture-bg {
   background: #0a0a0a url("../img/bg.png") center center repeat !important;
@@ -7506,10 +7549,14 @@ button {
 }
 
 .footer {
-  padding: 120px 0 30px;
+  padding: 130px 0 30px;
   background: #0a0a0a url("../img/bg.png") center center no-repeat;
   background-size: cover;
   border-bottom: 1px solid rgba(242, 242, 242, 0.1);
+}
+
+.footer__inner {
+  position: relative;
 }
 
 .footer__logo {
@@ -8055,6 +8102,11 @@ button {
 
   .main {
     padding-top: 74px;
+  }
+
+  .to-top-btn {
+    width: 50px;
+    height: 50px;
   }
 
   .section-title {
@@ -8781,6 +8833,10 @@ button {
   .btn {
     font-size: 18px;
     line-height: 1.1;
+  }
+
+  .to-top-btn {
+    top: -20px;
   }
 
   .breadcrumbs {
