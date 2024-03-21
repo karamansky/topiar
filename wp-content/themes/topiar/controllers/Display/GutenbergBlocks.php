@@ -312,6 +312,22 @@ class GutenbergBlocks {
 				]
 			],
 			[
+				'name'        => 'dark_form',
+				'title'       => 'Dark form block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'email' ],
+				'keywords'    => [ 'form', 'contacts', 'dark', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'dark-form-block.png',
+						]
+					]
+				]
+			],
+			[
 				'name'        => 'contacts',
 				'title'       => 'Contacts block',
 				'category'    => 'top-blocks',
