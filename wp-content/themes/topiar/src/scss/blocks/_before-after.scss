@@ -1,0 +1,144 @@
+.before-after {
+	background: $black;
+	padding: 80px 0;
+
+	& * {
+		max-height: 600px;
+	}
+
+	img {
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.twentytwenty-handle {
+		border-color: $orange !important;
+		background: $black;
+
+		&:before {
+			background: $orange !important;
+			box-shadow: 0 3px 0 $orange, 0 0 12px rgba(51, 51, 51, 0.5) !important;
+		}
+
+		&:after {
+			background: $orange !important;
+			box-shadow: 0 -3px 0 $orange, 0 0 12px rgba(51, 51, 51, 0.5) !important;
+		}
+	}
+
+	.twentytwenty-left-arrow {
+		border-right-color: $orange !important;
+	}
+
+	.twentytwenty-right-arrow {
+		border-left-color: $orange !important;
+	}
+
+	.twentytwenty-after-label,
+	.twentytwenty-before-label {
+		display: none !important;
+	}
+
+	.slick-prev {
+		order: 1;
+		position: relative;
+		left: auto;
+		top: auto;
+		transform: none;
+		margin-right: 14px;
+		background: url('../img/icons/gallery-slider-arrow-prev-icon.svg') center center no-repeat;
+		background-size: contain;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.slick-next {
+		order: 3;
+		position: relative;
+		right: auto;
+		top: auto;
+		transform: rotate(180deg);
+		margin-left: 14px;
+		background: url('../img/icons/gallery-slider-arrow-prev-icon.svg') center center no-repeat;
+		background-size: contain;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.slick-dots {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		position: relative;
+		bottom: auto;
+		order: 2;
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 16px;
+			height: 16px;
+			margin: 0 4px;
+		}
+
+		li button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 16px;
+			height: 16px;
+			padding: 0;
+			margin: 0;
+			position: relative;
+
+			&:before {
+				position: relative;
+				width: 12px;
+				height: 12px;
+				padding: 0;
+				border: 2px solid transparent;
+				border-radius: 50%;
+				background: $green;
+				color: transparent;
+				font-size: 0;
+				content: '';
+				opacity: 1;
+			}
+		}
+
+		li.slick-active button {
+			&:after {
+				content: '';
+				display: block;
+				width: 16px;
+				height: 16px;
+				background: $green;
+				border: 2px solid $white;
+				border-radius: 50%;
+				position: absolute;
+				top: calc(50% - 8px);
+				left: calc(50% - 8px);
+			}
+		}
+	}
+}
+
+.before-after__pagination {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+@media ($br_point_phone) {
+	.before-after {
+		padding: 56px 0;
+	}
+}

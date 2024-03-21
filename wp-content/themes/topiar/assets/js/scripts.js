@@ -262,6 +262,22 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.before-after__slider').length ) {
+        jQuery('.before-after__slider').slick({
+            draggable: false,
+            swipe: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            arrows: true,
+            dots: true,
+            appendArrows: '.before-after__pagination',
+            appendDots: '.before-after__pagination',
+        });
+    }
+
+
     if (jQuery('.reviews__items').length) {
         jQuery('.reviews__items').slick({
             slidesToShow: 2,

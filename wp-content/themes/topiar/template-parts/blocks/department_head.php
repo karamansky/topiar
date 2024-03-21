@@ -10,7 +10,7 @@
 
 	if( empty($person)  ) return false;
 ?>
-<section class="d-head">
+<section class="d-head bg-texture">
 	<div class="wrapper">
 		<div class="d-head__inner">
 			<div class="d-head__left">

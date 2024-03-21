@@ -303,7 +303,7 @@ button {
 //custom image background
 .bg-texture,
 .texture-bg {
-	background: $black url('../img/bg.png') center center repeat;
+	background: $black url('../img/bg.png') center center repeat !important;
 	background-size: 100% auto;
 }
 

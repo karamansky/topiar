@@ -3,8 +3,6 @@
 	padding: 80px 0;
 }
 
-.text-image__inner {}
-
 .text-image__top {
 	display: flex;
 	flex-wrap: wrap;
@@ -42,6 +40,99 @@
 		&:not(:last-child) {
 			margin-bottom: 10px;
 		}
+	}
+
+	h2 {
+		font-size: 42px;
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-bottom: 44px;
+		}
+	}
+
+	h3 {
+		font-size: 28px;
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	h4 {
+		font-size: 24px;
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	h5 {
+		font-size: 18px;
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	h6 {
+		font-size: 16px;
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	a {
+		font-size: 18px;
+		line-height: 1.2;
+		color: $green;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		padding: 0;
+		margin: 18px 0 18px 18px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			font-size: 18px;
+			font-weight: 500;
+			list-style-position: outside;
+			list-style-type: disc;
+		}
+	}
+
+	ol {
+		padding: 0;
+		margin: 18px 0 18px 18px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			font-size: 18px;
+			font-weight: 500;
+			list-style-position: outside;
+			list-style-type: decimal;
+		}
+	}
+
+	b,
+	strong {
+		font-weight: 700;
 	}
 }
 
@@ -99,6 +190,61 @@
 		font-weight: 400;
 
 		p {
+			font-size: 14px;
+			font-weight: 400;
+		}
+
+		h2 {
+			font-size: 14px;
+			font-weight: 600;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		h3 {
+			font-size: 14px;
+			font-weight: 600;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		h4 {
+			font-size: 14px;
+			font-weight: 600;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		h5 {
+			font-size: 14px;
+			font-weight: 600;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		h6 {
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		a {
+			font-size: 14px;
+		}
+
+		ul li {
+			font-size: 14px;
+			font-weight: 400;
+		}
+
+		ol li {
 			font-size: 14px;
 			font-weight: 400;
 		}

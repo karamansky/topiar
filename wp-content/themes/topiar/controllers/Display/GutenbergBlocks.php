@@ -376,6 +376,22 @@ class GutenbergBlocks {
 				]
 			],
 			[
+				'name'        => 'text_with_image2',
+				'title'       => 'Text with image (type2) block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'cover-image' ],
+				'keywords'    => [ 'text', 'image', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'text-with-image2-block.png',
+						]
+					]
+				]
+			],
+			[
 				'name'        => 'tasks',
 				'title'       => 'Tasks block',
 				'category'    => 'top-blocks',
@@ -517,6 +533,22 @@ class GutenbergBlocks {
 						'mode' => 'preview',
 						'data' => [
 							'image' => 'department-head-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'before_after',
+				'title'       => 'Before-After block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'image-flip-horizontal' ],
+				'keywords'    => [ 'before', 'after', 'gallry', 'image', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'before-after-block.png',
 						]
 					]
 				]
