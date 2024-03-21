@@ -1,0 +1,189 @@
+.why-us {
+	padding: 80px 0;
+	background: $black;
+}
+
+.why-us__top {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+	background: $black80;
+
+	border-radius: 6px 6px 0 0;
+	border: 2px solid $gray;
+}
+
+.why-us__title {
+	color: #FFF;
+	font-family: $font;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.2;
+	width: 282px;
+	padding-right: 30px;
+}
+
+.why-us__advantages {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 15px;
+	width: calc(100% - 282px);
+}
+
+.why-us__advantages-block {
+	width: calc(50% - 30px);
+	border-radius: 12px;
+	border: 1px solid $gray;
+	padding: 30px;
+}
+
+.why-us__advantages__item {
+	padding-left: 35px;
+	position: relative;
+	color: #FFF;
+	font-family: $font;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+
+	&:not(:last-child) {
+		margin-bottom: 14px;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url('../img/icons/advantage-ok-icon.svg') center center no-repeat;
+		background-size: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+.why-us__bottom {
+	width: 100%;
+	height: 250px;
+}
+
+.why-us__image {
+	width: 100%;
+	height: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 0 0 6px 6px;
+	}
+}
+
+
+
+
+
+@media ($br_point_laptop) {
+	.why-us__title {
+		font-size: 32px;
+		padding-right: 20px;
+		max-width: 260px;
+	}
+
+	.why-us__advantages {
+		padding-left: 15px;
+		width: calc(100% - 260px);
+	}
+
+	.why-us__advantages-block {
+		width: calc(50% - 15px);
+		padding: 20px;
+	}
+
+	.why-us__advantages__item {
+		padding-left: 30px;
+	}
+}
+
+
+
+
+
+@media ($br_point_tablet) {
+	.why-us__top {
+		display: block;
+	}
+
+	.why-us__title {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 30px;
+		padding-right: 0;
+	}
+
+	.why-us__advantages {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.why-us__advantages__item {
+		padding-left: 30px;
+	}
+
+	.why-us__bottom {
+		height: 200px;
+	}
+}
+
+
+
+
+
+@media ($br_point_phone) {
+	.why-us__top {
+		padding: 20px;
+	}
+
+	.why-us__title {
+		margin-bottom: 30px;
+	}
+
+	.why-us__advantages-block {
+		width: calc(50% - 10px);
+	}
+
+	.why-us__bottom {
+		height: 170px;
+	}
+}
+
+
+
+
+
+@media (max-width: 576px) {
+	.why-us__top {
+		padding: 20px;
+	}
+
+	.why-us__title {
+		font-size: 28px;
+	}
+
+	.why-us__advantages-block {
+		width: 100%;
+		padding: 0;
+		border: none;
+
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+
+	.why-us__bottom {
+		height: 170px;
+	}
+}

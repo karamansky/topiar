@@ -559,12 +559,28 @@ class GutenbergBlocks {
 				'category'    => 'top-blocks',
 				'description' => '',
 				'icon'        => [ 'background' => '#008237', 'src' => 'image-flip-horizontal' ],
-				'keywords'    => [ 'before', 'after', 'gallry', 'image', 'block' ],
+				'keywords'    => [ 'before', 'after', 'gallery', 'image', 'block' ],
 				'example'     => [
 					'attributes' => [
 						'mode' => 'preview',
 						'data' => [
 							'image' => 'before-after-block.png',
+						]
+					]
+				]
+			],
+			[
+				'name'        => 'why_us',
+				'title'       => 'Why Choose Us block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'editor-ul' ],
+				'keywords'    => [ 'why', 'us', 'advantages', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'why-us-block.png',
 						]
 					]
 				]
