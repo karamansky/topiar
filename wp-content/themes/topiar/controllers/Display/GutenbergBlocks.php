@@ -328,6 +328,22 @@ class GutenbergBlocks {
 				]
 			],
 			[
+				'name'        => 'bottom_form',
+				'title'       => 'Bottom form block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'email' ],
+				'keywords'    => [ 'form', 'contacts', 'dark', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'bottom-form-block.png',
+						]
+					]
+				]
+			],
+			[
 				'name'        => 'contacts',
 				'title'       => 'Contacts block',
 				'category'    => 'top-blocks',

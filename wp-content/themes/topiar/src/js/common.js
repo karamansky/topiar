@@ -234,6 +234,14 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if( jQuery('.bottom-form__close').length ) {
+        jQuery(document).on('click', '.bottom-form__close', function(e){
+            e.preventDefault();
+            jQuery(this).parents('.bottom-form').addClass('bottom-form--hidden');
+        })
+    }
+
+
     if( jQuery('.d-head__content-more').length ) {
       jQuery(document).on('click', '.d-head__content-more', function(e) {
           e.preventDefault();
