@@ -490,6 +490,22 @@ class GutenbergBlocks {
 				]
 			],
 			[
+				'name'        => 'blog_posts',
+				'title'       => 'Blog posts block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'media-spreadsheet' ],
+				'keywords'    => [ 'blog', 'posts', 'more blogs', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'blog-posts-block.png',
+						]
+					]
+				]
+			],
+			[
 				'name'        => 'department_head',
 				'title'       => 'Department head block',
 				'category'    => 'top-blocks',
