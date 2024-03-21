@@ -473,6 +473,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'department_head',
+				'title'       => 'Department head block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'excerpt-view' ],
+				'keywords'    => [ 'head', 'department', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'department-head-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 

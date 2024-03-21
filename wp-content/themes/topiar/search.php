@@ -61,11 +61,6 @@
 
 							wp_reset_postdata();
 						}
-
-
-//					echo "<pre>";
-//					print_r($the_main_query);
-//					echo "</pre>";
 					?>
 					<div id="tp-view" class="<?php echo $view_class; ?>">
 
