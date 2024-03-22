@@ -9920,7 +9920,7 @@ button {
   }
 
   .text-image2 {
-    padding: 56px 0 0;
+    padding: 56px 0;
   }
 
   .text-image2__inner {
@@ -10478,6 +10478,47 @@ button {
 
   .before-after {
     padding: 56px 0;
+  }
+
+  .before-after .twentytwenty-after-label,
+  .before-after .twentytwenty-before-label {
+    display: block !important;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #f8f8f8;
+  }
+
+  .before-after .twentytwenty-horizontal .twentytwenty-before-label:before,
+  .before-after .twentytwenty-horizontal .twentytwenty-after-label:before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: auto !important;
+    margin-top: 0 !important;
+    bottom: 10px !important;
+    width: 72px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    background: #484848 !important;
+    border: 1px solid #f8f8f8;
+    border-radius: 4px;
+  }
+
+  .before-after .twentytwenty-horizontal .twentytwenty-before-label:before {
+    left: calc(25% - 36px);
+  }
+
+  .before-after .twentytwenty-horizontal .twentytwenty-after-label:before {
+    right: calc(25% - 36px);
   }
 
   .bottom-form__inner {
