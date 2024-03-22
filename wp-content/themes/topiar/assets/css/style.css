@@ -4423,6 +4423,17 @@ button {
   flex-shrink: 0;
 }
 
+.d-head__left .simplebar-track.simplebar-horizontal {
+  background: transparent;
+  height: 4px;
+}
+
+.d-head__left .simplebar-scrollbar.simplebar-visible:before {
+  background: #EF7D00;
+  opacity: 1;
+  border-radius: 0;
+}
+
 .d-head__image-wrap {
   position: relative;
 }
@@ -4587,7 +4598,7 @@ button {
 
 .d-head__content-text h2 {
   color: #0a0a0a;
-  font-family: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
   font-size: 42px;
   font-weight: 700;
   line-height: 1.2;
@@ -4599,7 +4610,7 @@ button {
 
 .d-head__content-text h3 {
   color: #0a0a0a;
-  font-family: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
@@ -4611,7 +4622,7 @@ button {
 
 .d-head__content-text h4 {
   color: #0a0a0a;
-  font-family: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
@@ -4623,7 +4634,7 @@ button {
 
 .d-head__content-text h5 {
   color: #0a0a0a;
-  font-family: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -4635,7 +4646,7 @@ button {
 
 .d-head__content-text h6 {
   color: #0a0a0a;
-  font-family: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
@@ -10217,6 +10228,167 @@ button {
   .chess-text__block ol li {
     font-size: 14px;
     font-weight: 400;
+  }
+
+  .d-head {
+    padding: 56px 0;
+  }
+
+  .d-head__inner {
+    display: block;
+  }
+
+  .d-head__left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .d-head__left-inner {
+    overflow-x: auto;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #484848;
+  }
+
+  .d-head__image-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .d-head__image {
+    width: 235px;
+    height: 340px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .d-head__image-overlay {
+    width: 235px;
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    opacity: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .d-head__image-overlay h2 {
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
+
+  .d-head__name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .d-head__position {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    text-transform: none;
+    max-width: 235px;
+  }
+
+  .d-head__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .d-head__content-inner {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .d-head__content-text-wrap {
+    height: 235px;
+  }
+
+  .d-head__content-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .d-head__content-text h2 {
+    font-size: 20px;
+  }
+
+  .d-head__content-text h2:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .d-head__content-text h3 {
+    font-size: 20px;
+  }
+
+  .d-head__content-text h3:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .d-head__content-text h4 {
+    font-size: 18px;
+  }
+
+  .d-head__content-text h4:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .d-head__content-text h5 {
+    font-size: 16px;
+  }
+
+  .d-head__content-text h5:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .d-head__content-text h6 {
+    font-size: 14px;
+  }
+
+  .d-head__content-text p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .d-head__content-text p:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  .d-head__content-more {
+    font-size: 12px;
+    padding-top: 6px;
+    padding-left: 0;
+  }
+
+  .d-head__content-more:before {
+    width: 36px;
+    top: 0;
+    left: 0;
+  }
+
+  .d-head__content-image {
+    width: 100%;
+    height: 265px;
+  }
+
+  .d-head__content-image img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
   }
 
   .blog-posts {

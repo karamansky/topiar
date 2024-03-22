@@ -15,8 +15,12 @@
 		<div class="d-head__inner">
 			<div class="d-head__left">
 				<?php if( !empty($person['image']) ) { ?>
-					<div class="d-head__image-wrap">
-						<?php //if( !empty($person['title']) ) { ?>
+					<div class="d-head__left-inner" >
+						<div class="d-head__image-wrap" >
+							<div class="d-head__image">
+								<?php DisplayGlobal::renderAcfImage($person['image']); ?>
+							</div>
+
 							<div class="d-head__image-overlay">
 								<?php if( !empty($person['title']) ) { ?>
 									<h2 class="d-head__hover-title"><?php echo $person['title']; ?></h2>
@@ -29,9 +33,6 @@
 									</div>
 								<?php } ?>
 							</div>
-
-						<div class="d-head__image">
-							<?php DisplayGlobal::renderAcfImage($person['image']); ?>
 						</div>
 					</div>
 				<?php } ?>

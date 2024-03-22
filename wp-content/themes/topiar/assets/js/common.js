@@ -75,6 +75,15 @@ jQuery(document).ready(function( $ ) {
     }
 
 
+    if ( jQuery('.d-head__left-inner').length ) {
+        //init custom scrollbar
+        const dHeadScroll = new SimpleBar(jQuery('.d-head__left-inner')[0], {
+            autoHide: false,
+            // forceVisible: 'x',
+        });
+    }
+
+
     if( jQuery('.portfolio__category-wrap').length ) {
         //init custom scrollbar
         const portfolioSidebar = new SimpleBar(jQuery('.portfolio__category-wrap')[0], {
