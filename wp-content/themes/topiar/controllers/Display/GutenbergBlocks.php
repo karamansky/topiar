@@ -585,6 +585,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'price',
+				'title'       => 'Price block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'money-alt' ],
+				'keywords'    => [ 'price', 'tarif', 'table', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'price-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
