@@ -601,6 +601,22 @@ class GutenbergBlocks {
 					]
 				]
 			],
+			[
+				'name'        => 'terms',
+				'title'       => 'Terms block',
+				'category'    => 'top-blocks',
+				'description' => '',
+				'icon'        => [ 'background' => '#008237', 'src' => 'calendar' ],
+				'keywords'    => [ 'terms', 'table', 'block' ],
+				'example'     => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'image' => 'terms-block.png',
+						]
+					]
+				]
+			],
 		];
 	}
 
